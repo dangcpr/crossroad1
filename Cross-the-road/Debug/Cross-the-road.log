@@ -1,0 +1,7 @@
+﻿  Menu.cpp
+  main.cpp
+C:\Users\HAI DANG\source\repos\Cross-the-road\Cross-the-road\main.cpp(10,9): warning C4101: 'SPEED': unreferenced local variable
+C:\Users\HAI DANG\source\repos\Cross-the-road\Cross-the-road\main.cpp(9,9): warning C4101: 'MOVING': unreferenced local variable
+C:\Users\HAI DANG\source\repos\Cross-the-road\Cross-the-road\main.cpp(11,10): warning C4101: 'STATE': unreferenced local variable
+  Generating Code...
+  Cross-the-road.vcxproj -> C:\Users\HAI DANG\source\repos\Cross-the-road\Debug\Cross-the-road.exe
