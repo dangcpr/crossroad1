@@ -4,7 +4,7 @@
 #define MAX_SPEED 3
 //Biến toàn cục
  // Đại diện người qua đường
-
+#define a 13
 #define WIDTH 1320
 #define HEIGHT 700
 #define X_CENTER WIDTH / 16 + 2
