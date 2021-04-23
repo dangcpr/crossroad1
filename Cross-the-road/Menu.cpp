@@ -1,5 +1,5 @@
 #include"Menu.h"
-
+//OK
 void CreateConsoleWindow(int pWidth, int pHeight)
 {
 	HWND consoleWindow = GetConsoleWindow();
