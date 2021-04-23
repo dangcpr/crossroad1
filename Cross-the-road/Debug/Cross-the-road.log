@@ -1,7 +1,233 @@
-﻿  Menu.cpp
-  main.cpp
-C:\Users\HAI DANG\source\repos\Cross-the-road\Cross-the-road\main.cpp(10,9): warning C4101: 'SPEED': unreferenced local variable
-C:\Users\HAI DANG\source\repos\Cross-the-road\Cross-the-road\main.cpp(9,9): warning C4101: 'MOVING': unreferenced local variable
-C:\Users\HAI DANG\source\repos\Cross-the-road\Cross-the-road\main.cpp(11,10): warning C4101: 'STATE': unreferenced local variable
+﻿  main.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(7434,22): error C2143: syntax error: missing ')' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(7434,22): error C2143: syntax error: missing ';' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(7434,22): warning C4392: 'void _mm_prefetch(const CHAR *)': incorrect number of arguments for intrinsic function, expected '2' arguments
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(7434,22): error C2059: syntax error: 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(7436,5): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(7438,9): warning C4392: 'void _mm_prefetch(const CHAR *)': incorrect number of arguments for intrinsic function, expected '2' arguments
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2143: syntax error: missing ')' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2143: syntax error: missing ';' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2805: binary 'operator |' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2059: syntax error: 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2805: binary 'operator |=' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2805: binary 'operator &=' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2805: binary 'operator ^' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2059: syntax error: '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12031,1): error C2059: syntax error: '-'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2143: syntax error: missing ')' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2143: syntax error: missing ';' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2805: binary 'operator |' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2059: syntax error: 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2805: binary 'operator |=' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2059: syntax error: '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12070,61): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12070,61): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12078,47): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12081,52): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12081,52): error C2378: 'JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE': redefinition; symbol cannot be overloaded with a typedef
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12078): message : see declaration of 'JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12081,5): error C2146: syntax error: missing ';' before identifier 'JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE_V1'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(19916,9): warning C4162: '__fastfail': no function with C linkage found
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(22754,1): error C2059: syntax error: '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(22754,1): error C2143: syntax error: missing ';' before '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\minwindef.h(278,1): error C2059: syntax error: '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\minwindef.h(278,1): error C2143: syntax error: missing ';' before '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windef.h(39,1): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windef.h(39,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windef.h(241,1): error C2059: syntax error: '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windef.h(241,1): error C2143: syntax error: missing ';' before '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windef.h(250,1): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windef.h(250,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\sysinfoapi.h(489,6): error C2732: linkage specification contradicts earlier specification for 'VerSetConditionMask'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\sysinfoapi.h(486): message : see declaration of 'VerSetConditionMask'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(91,55): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(101,55): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(119,55): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(132,70): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1079,19): error C3646: 'wParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1079,19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1091,19): error C3646: 'wParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1091,19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1157,19): error C3646: 'wParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1157,19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1193,19): error C3646: 'wParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1193,19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1882,23): error C3646: 'wParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1882,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3697,41): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3705,41): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3749,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3760,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3777,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3785,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3799,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3809,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3834,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3844,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3870,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3879,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4031,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4039,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4053,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4061,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4143,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4156,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4179,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4188,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5231,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5240,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5287,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5300,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2143: syntax error: missing ')' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2143: syntax error: missing ';' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2805: binary 'operator |' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2059: syntax error: 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2805: binary 'operator |=' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2733: '&': you cannot overload a function with 'extern "C"' linkage
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): message : see declaration of 'operator &'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2805: binary 'operator &=' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2059: syntax error: '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2143: syntax error: missing ')' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2143: syntax error: missing ';' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2805: binary 'operator |' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2059: syntax error: 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2805: binary 'operator |=' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2059: syntax error: '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(8326,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(8340,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(10322,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(12035,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(12044,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(12063,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(12076,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(14864,18): error C3646: 'wParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(14864,18): fatal error C1003: error count exceeds 100; stopping compilation
+  Menu.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(7434,22): error C2143: syntax error: missing ')' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(7434,22): error C2143: syntax error: missing ';' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(7434,22): warning C4392: 'void _mm_prefetch(const CHAR *)': incorrect number of arguments for intrinsic function, expected '2' arguments
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(7434,22): error C2059: syntax error: 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(7436,5): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(7438,9): warning C4392: 'void _mm_prefetch(const CHAR *)': incorrect number of arguments for intrinsic function, expected '2' arguments
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2143: syntax error: missing ')' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2143: syntax error: missing ';' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2805: binary 'operator |' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2059: syntax error: 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2805: binary 'operator |=' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2805: binary 'operator &=' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2805: binary 'operator ^' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): error C2059: syntax error: '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12031,1): error C2059: syntax error: '-'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2143: syntax error: missing ')' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2143: syntax error: missing ';' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2805: binary 'operator |' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2059: syntax error: 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2805: binary 'operator |=' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12066,1): error C2059: syntax error: '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12070,61): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12070,61): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12078,47): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12081,52): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12081,52): error C2378: 'JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE': redefinition; symbol cannot be overloaded with a typedef
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12078): message : see declaration of 'JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12081,5): error C2146: syntax error: missing ';' before identifier 'JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE_V1'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(19916,9): warning C4162: '__fastfail': no function with C linkage found
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(22754,1): error C2059: syntax error: '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(22754,1): error C2143: syntax error: missing ';' before '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\minwindef.h(278,1): error C2059: syntax error: '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\minwindef.h(278,1): error C2143: syntax error: missing ';' before '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windef.h(39,1): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windef.h(39,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windef.h(241,1): error C2059: syntax error: '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windef.h(241,1): error C2143: syntax error: missing ';' before '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windef.h(250,1): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\windef.h(250,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\sysinfoapi.h(489,6): error C2732: linkage specification contradicts earlier specification for 'VerSetConditionMask'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\sysinfoapi.h(486): message : see declaration of 'VerSetConditionMask'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(91,55): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(101,55): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(119,55): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(132,70): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1079,19): error C3646: 'wParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1079,19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1091,19): error C3646: 'wParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1091,19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1157,19): error C3646: 'wParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1157,19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1193,19): error C3646: 'wParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1193,19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1882,23): error C3646: 'wParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(1882,23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3697,41): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3705,41): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3749,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3760,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3777,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3785,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3799,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3809,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3834,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3844,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3870,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(3879,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4031,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4039,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4053,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4061,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4143,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4156,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4179,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4188,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5231,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5240,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5287,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5300,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2143: syntax error: missing ')' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2143: syntax error: missing ';' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2805: binary 'operator |' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2059: syntax error: 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2805: binary 'operator |=' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2733: '&': you cannot overload a function with 'extern "C"' linkage
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(12030,1): message : see declaration of 'operator &'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2805: binary 'operator &=' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5316,1): error C2059: syntax error: '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2143: syntax error: missing ')' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2143: syntax error: missing ';' before 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2805: binary 'operator |' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2059: syntax error: 'constant'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2805: binary 'operator |=' has too few parameters
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(5339,1): error C2059: syntax error: '}'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(8326,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(8340,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(10322,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(12035,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(12044,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(12063,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(12076,17): error C2061: syntax error: identifier 'WPARAM'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(14864,18): error C3646: 'wParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(14864,18): fatal error C1003: error count exceeds 100; stopping compilation
   Generating Code...
-  Cross-the-road.vcxproj -> C:\Users\HAI DANG\source\repos\Cross-the-road\Debug\Cross-the-road.exe
