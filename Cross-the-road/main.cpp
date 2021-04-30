@@ -1,7 +1,7 @@
 ﻿// Cross-the-road.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include "Menu.h"
+#include "Ctrl.h"
 
 int main()
 {
@@ -11,5 +11,7 @@ int main()
     bool STATE; // Trạng thái sống/chết của người qua đường
     CreateConsoleWindow(WIDTH, HEIGHT);
     FixConsoleWindow();
+    MenuControl();
+    GoTo(0, 0);
     return 0;
 }

@@ -4,8 +4,6 @@
 #define MAX_SPEED 3
 //Biến toàn cục
  // Đại diện người qua đường
-#define a 13
-#define b 15
 #define WIDTH 1320
 #define HEIGHT 700
 #define X_CENTER WIDTH / 16 + 2
@@ -45,6 +43,11 @@
 #define SAVED_LIST "FileDaLuu.txt" //Ten cac file game duoc save
 #define PLAYER_LIST "DSNguoiChoi.txt" //Thong tin cac player da choi game
 
-using std::cout;
-using std::cin;
-using std::string;
+using namespace std;
+
+struct MENU
+{
+	int choices; //So chuc nang menu
+	int x;			 // Toa do cua diem bat 
+	int y;			 //dau cua chuc nang dau tien
+};
