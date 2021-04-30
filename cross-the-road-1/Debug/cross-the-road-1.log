@@ -1,0 +1,10 @@
+﻿  Ctrl.cpp
+  Data.cpp
+  main.cpp
+D:\crossroad1\crossroad1\Cross-the-road\main.cpp(10,9): warning C4101: 'SPEED': unreferenced local variable
+D:\crossroad1\crossroad1\Cross-the-road\main.cpp(9,9): warning C4101: 'MOVING': unreferenced local variable
+D:\crossroad1\crossroad1\Cross-the-road\main.cpp(11,10): warning C4101: 'STATE': unreferenced local variable
+  Menu.cpp
+D:\crossroad1\crossroad1\Cross-the-road\Menu.cpp(88,20): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  cross-the-road-1.vcxproj -> D:\crossroad1\cross-the-road-1\Debug\cross-the-road-1.exe

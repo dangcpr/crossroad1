@@ -1,0 +1,16 @@
+-------- HELP FOR PLAYER --------
+        Press W to go up. 
+        Press S to go up. 
+       Press A to go left. 
+       Press D to go right. 
+	     
+              ------
+
+     Press W to save the game.
+     Press P to stop the game.
+	
+              ------
+     After finishing the game:  
+Press ESC to return to the menu screen.
+     Press E to exit the game. 
+
