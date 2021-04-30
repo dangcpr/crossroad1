@@ -99,7 +99,7 @@ MENU DisplayMenu()
 	menu.choices = 3;
 	menu.x = X_CENTER - 13;
 	menu.y = Y_CENTER + 10;
-	
+
 	system("cls");
 
 	BigText("Logo.txt", 240, 20, 3);
@@ -186,7 +186,7 @@ void InputFileName(string& s, int x, int y)
 	Clear(s, s3, x, y + 1);
 	Text("Dung ten file! ", 124, x, y);
 
-	
+
 }
 void Help() //Tro giup
 {
@@ -213,23 +213,21 @@ void DrawBoard(int row, int col, int x, int y, int width, int height)
 		GoTo(x, y + i);
 		cout << "|";
 	}
-	for (int i = 0; i <= height; i+=6)
+	for (int i = 0; i <= height; i += 6)
 	{
-		for (int j=0;j<=width;j++)
+		for (int j = 0; j <= width; j++)
 		{
 			//Sleep(1);
-			GoTo(x + j+1, y + i-1);
+			GoTo(x + j + 1, y + i - 1);
 			cout << "_";
 		}
 	}
 	for (int i = 0; i < height; i++)
 	{
 		//Sleep(1);
-		GoTo(x + width+2, y + i);
+		GoTo(x + width + 2, y + i);
 		cout << "|";
 	}
 	GoTo(0, 0);
 	_getch();
 }
-
-

@@ -1,4 +1,5 @@
 #pragma once
+#include "Ctrl.h"
 #include "Data.h"
 void CreateConsoleWindow(int pWidth, int pHeight);
 void FixConsoleWindow();
@@ -15,7 +16,7 @@ void BigText(string filename, int color, int x, int y);//In du lieu tep tin
 MENU DisplayMenu();
 
 //Cac option
-vector<string> FileSaved(string filename); //Luu ten tung file vao tung phan tu cua vector
+vector<string> FileSaved(string filename);//Luu ten tung file vao tung phan tu cua vector
 void ShowFile();//Man hinh hien ten file
 bool FileAvailable(string s);//Kiem tra file co ton tai khong
 void InputFileName(string& s, int x, int y);//Nhap ten file

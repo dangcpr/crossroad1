@@ -52,3 +52,8 @@ struct MENU
 	int x;			 // Toa do cua diem bat 
 	int y;			 //dau cua chuc nang dau tien
 };
+struct Name
+{
+	int n;
+	string* s;
+};

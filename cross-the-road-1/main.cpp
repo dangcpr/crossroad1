@@ -15,4 +15,5 @@ int main(void)
     BoxLoading(32, 100, 1, 35, 30);
     Sleep(1000);
     MenuControl();
+    return 0;
 }
