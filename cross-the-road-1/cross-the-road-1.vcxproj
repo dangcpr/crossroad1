@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ctrl.h" />
+    <ClInclude Include="Data.h" />
+    <ClInclude Include="Menu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Ctrl.cpp" />
+    <ClCompile Include="Data.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,17 +149,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\crossroad1\Cross-the-road\Ctrl.cpp" />
-    <ClCompile Include="..\..\crossroad1\Cross-the-road\Data.cpp" />
-    <ClCompile Include="..\..\crossroad1\Cross-the-road\main.cpp" />
-    <ClCompile Include="..\..\crossroad1\Cross-the-road\Menu.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\crossroad1\Cross-the-road\Ctrl.h" />
-    <ClInclude Include="..\..\crossroad1\Cross-the-road\Data.h" />
-    <ClInclude Include="..\..\crossroad1\Cross-the-road\Menu.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

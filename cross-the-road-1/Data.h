@@ -35,6 +35,7 @@
 #define VERTICAL_LINE (char)179
 #include <iostream>
 #include <Windows.h>
+#include <stdlib.h>
 #include <conio.h>
 #include <string>
 #include <fstream>

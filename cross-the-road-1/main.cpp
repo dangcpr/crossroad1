@@ -3,7 +3,7 @@
 
 #include "Ctrl.h"
 
-int main()
+int main(void)
 {
     int cnt = 0;//Biến hỗ trợ trong quá trình tăng tốc độ xe di chuyển
     int MOVING;//Biến xác định hướng di chuyển của người
@@ -11,7 +11,8 @@ int main()
     bool STATE; // Trạng thái sống/chết của người qua đường
     CreateConsoleWindow(WIDTH, HEIGHT);
     FixConsoleWindow();
-    BoxLoading(224, 100, 1, 30, 30);
-    GoTo(0, 0);
-    return 0;
+
+    BoxLoading(32, 100, 1, 35, 30);
+    Sleep(1000);
+    MenuControl();
 }
