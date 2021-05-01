@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="Ctrl.h" />
     <ClInclude Include="Data.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="Menu.h" />
   </ItemGroup>
   <ItemGroup>
@@ -28,6 +29,7 @@
     <ClCompile Include="Data.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Game.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

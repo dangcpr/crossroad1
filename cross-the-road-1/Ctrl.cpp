@@ -12,7 +12,7 @@ void MenuControl()
 		if (press == '1')
 		{
 			system("cls");
-			DrawBoard(0, 0, 10, 5.5, 110, 30);
+			InGame();
 			//PauseGame
 		}
 		else if (press == '2')

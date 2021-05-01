@@ -21,6 +21,3 @@ void ShowFile();//Man hinh hien ten file
 bool FileAvailable(string s);//Kiem tra file co ton tai khong
 void InputFileName(string& s, int x, int y);//Nhap ten file
 void Help();
-void ExitGame();
-void PauseGame();
-void DrawBoard(int row, int col, int x, int y, int width, int height);
