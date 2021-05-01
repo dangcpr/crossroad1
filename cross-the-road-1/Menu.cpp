@@ -176,17 +176,23 @@ void InputFileName(string& s, int x, int y)
 	getline(cin, s);
 	while (FileAvailable(s) == 0)
 	{
+		if (s == " ")
+		{
+			system("cls");
+			SetColor(240);
+			MenuControl();
+			return;
+		}
 		Clear(s, s1, x, y);
 		Text(s2, 124, x, y);
 		Clear(s, s3, x, y + 1);
 		Text(s3, 124, x, y + 1);
 		getline(cin, s);
+
 	}
 	Clear(s, s2, x, y);
 	Clear(s, s3, x, y + 1);
 	Text("Dung ten file! ", 124, x, y);
-
-
 }
 void Help() //Tro giup
 {
@@ -200,10 +206,15 @@ void Help() //Tro giup
 		MenuControl();
 	}
 }
+void PauseGame()
+{
+	Box(124, 75, 27, X_CENTER - 34, Y_CENTER - 15);
+}
 void ExitGame()
 {
 	BigText("ThankYou.txt", 71, 40, 15);
 	Sleep(3000);
+	SetColor(255);
 }
 void DrawBoard(int row, int col, int x, int y, int width, int height)
 {
