@@ -136,7 +136,7 @@ void ShowFile()
 	menu.y = Y_CENTER + 10;
 
 	system("cls");
-	File.size() - 1;
+
 	BigText("Logo.txt", 240, 20, 3);
 	BigText("LogoCar.txt", 240, 43, 15);
 	Box(124, 53, 13, X_CENTER - 25, Y_CENTER + 5);
