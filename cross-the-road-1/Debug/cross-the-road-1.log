@@ -1,3 +1,6 @@
 ﻿  Game.cpp
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(22,22): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(26,22): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(51,9): warning C4244: 'argument': conversion from 'double' to 'DWORD', possible loss of data
+D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(59,10): warning C4244: 'argument': conversion from 'double' to 'DWORD', possible loss of data
+D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(66,9): warning C4244: 'argument': conversion from 'double' to 'DWORD', possible loss of data
   cross-the-road-1.vcxproj -> D:\crossroad1\crossroad1\Debug\cross-the-road-1.exe
