@@ -1,6 +1,20 @@
-﻿  Game.cpp
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(26,22): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(51,9): warning C4244: 'argument': conversion from 'double' to 'DWORD', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(59,10): warning C4244: 'argument': conversion from 'double' to 'DWORD', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(66,9): warning C4244: 'argument': conversion from 'double' to 'DWORD', possible loss of data
+﻿  Ctrl.cpp
+  Game.cpp
+D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(28,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(54,15): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(56,15): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(68,43): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(73,45): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(94,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(339,22): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Menu.cpp
+D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(91,20): warning C4018: '<': signed/unsigned mismatch
+D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(153,20): warning C4018: '<': signed/unsigned mismatch
+D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(165,20): warning C4018: '<': signed/unsigned mismatch
+D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(172,7): warning C4101: 'menu': unreferenced local variable
+  main.cpp
+D:\crossroad1\crossroad1\cross-the-road-1\main.cpp(10,9): warning C4101: 'SPEED': unreferenced local variable
+D:\crossroad1\crossroad1\cross-the-road-1\main.cpp(9,9): warning C4101: 'MOVING': unreferenced local variable
+D:\crossroad1\crossroad1\cross-the-road-1\main.cpp(11,10): warning C4101: 'STATE': unreferenced local variable
+  Generating Code...
   cross-the-road-1.vcxproj -> D:\crossroad1\crossroad1\Debug\cross-the-road-1.exe
