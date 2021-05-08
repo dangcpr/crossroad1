@@ -1,38 +1,357 @@
 #include "Game.h"
+#include "Data.h"
+#include "Menu.h"
+#include <thread>
 
-void ControlInGame()
+struct Cars
 {
-	while (1)
+	int n[5];
+	int x[5][3];
+	bool State[5];
+};
+
+struct you
+{
+	int x, y;
+};
+int timeStart[5], timeCur[5];
+you Y;
+Cars a;
+int spd;
+char Moving;
+bool STT;
+bool mark[130];
+int Score = 0;
+
+void CreateCar()
+{
+	srand(time(NULL));
+	for (int i = 0; i < 5; i++)
 	{
-		char press;
-		press = _getch();
-		if (press == 'p')
+		a.n[i] = (rand() % 3) + 1;
+		a.x[i][0] = (i % 2 == 0) ? 11 : 109;
+		for (int j = 1; j < a.n[i]; j++)
 		{
-			PauseGame();
-			char press1;
-			press1 = _getch();
-			if (press1 == 'r') {
-				ClearScreen(45, 10, X_CENTER + 43, Y_CENTER - 16);
-				GoTo(0, 0);
-			}
-			else if (press1 == 'e') {
-				ExitGame();
+			int temp = (i % 2 == 0) ? 35 : -35;
+			a.x[i][j] = a.x[i][j - 1] + temp;
+		}
+		a.State[i] = 1;
+		timeStart[i]  = (rand() % 50) + 50;
+		timeCur[i] = timeStart[i];
+	}
+}
+
+void StopCar()
+{
+	for (int i = 0; i < 5; i++)
+	{
+		timeCur[i]--;
+		if (timeCur[i] < 0)
+		{
+			timeCur[i] = timeStart[i];
+			a.State[i] = !a.State[i];
+		}
+		GoTo(5, 5.5 + (i * 6));
+		cout << "  ";
+		GoTo(5, 5.5 + (i * 6));
+		cout << timeCur[i];
+	}
+	
+}
+void DrawCar()
+{
+	for (int i = 0; i < 5; i++)
+	{
+		if(i%2==0)
+		for (int j = 0; j < a.n[i]; j++)
+		{
+			BigText("Car.txt", 240, a.x[i][j], 5.5 + (i * 6));
+		}
+		else 
+		for (int j = 0; j < a.n[i]; j++)
+		{
+			BigText("ReCar.txt", 240, a.x[i][j], 5.5 + (i * 6));
+		}
+	}
+}
+void ErasePerson()
+{
+	for (int i = 0; i < 4; i++)
+	{
+		GoTo(Y.x, Y.y + i);
+		cout << "   ";
+	}
+}
+
+void EraseCar()
+{
+	for (int i = 0; i < 5; i++)
+	{
+		for (int j = 0; j < a.n[i]; j++)
+		{
+			for (int k = 0; k < 5; k++)
+			{
+				GoTo(a.x[i][j], 5.5 + (i * 6) + k);
+					cout << "                     ";
 			}
 		}
 	}
 }
+
+void MoveCar()
+{
+	for (int i = 0; i < 5; i+=2)
+	{
+		int cnt = 0;
+		do
+		{
+			cnt++;
+			if (a.State[i])
+			{
+				for (int j = 0; j < a.n[i]; j++)
+				{
+					if (a.x[i][j] + 1 > 109)
+						a.x[i][j] = 11;
+					else a.x[i][j]++;
+				}
+			}
+		} while (cnt < spd);
+	}
+	for (int i = 1; i < 5; i += 2)
+	{
+		int cnt = 0;
+		do
+		{
+			cnt++;
+			if (a.State[i])
+			{	
+				for (int j = 0; j < a.n[i]; j++)
+				{
+					if (a.x[i][j] - 1 < 11)
+						a.x[i][j] = 109;
+					else a.x[i][j]--;
+				}
+			}
+		} while (cnt < spd);
+	}
+}
+void MoveUp()
+{
+	if (Y.y - 6 > 0)
+	{
+		ErasePerson();
+		Y.y -= 6;
+		BigText("Person.txt", 240, Y.x, Y.y);
+	}
+	else if (Y.y - 6 == 0)
+	{
+		if (mark[Y.x] == 0 && mark[Y.x + 1] == 0 && mark[Y.x + 2] == 0)
+		{
+			ErasePerson();
+			Y.y -= 6;
+			BigText("Person.txt", 240, Y.x, Y.y);
+			mark[Y.x] = 1;
+			mark[Y.x + 1] = 1;
+			mark[Y.x + 2] = 1;
+		}
+		else
+		{
+			STT = 0;
+			char tmp=' ';
+			MENU menu;
+			menu.x = X_CENTER + 52;
+			menu.y = Y_CENTER - 11;
+			Box(124, 45, 10, X_CENTER + 50, Y_CENTER - 16);
+			Text("*********** PAUSE ************", 117, menu.x, menu.y - 2);
+			Text(" Va vao nguoi khac se bi tru 50 diem ", 124, menu.x, menu.y);
+			Text("    An 'w' de dong y    ", 124, menu.x, menu.y + 1);
+			Text("    An 's' de tu choi    ", 124, menu.x, menu.y + 2);
+			while (tmp!='w' && tmp!='s')
+			tmp = _getch();
+			if (tmp == 'w')
+			{
+				ClearScreen(45, 10, X_CENTER + 50, Y_CENTER - 16);
+				ErasePerson();
+				Y.y -= 6;
+				BigText("Person.txt", 240, Y.x, Y.y);
+				GoTo(0, 0);
+				mark[Y.x] = 1;
+				mark[Y.x + 1] = 1;
+				mark[Y.x + 2] = 1;
+				Score -= 50;
+				STT = 1;
+			}
+			else if(tmp=='s')
+			{
+				ClearScreen(45, 10, X_CENTER + 50, Y_CENTER - 16);
+				GoTo(0, 0);
+				STT = 1;
+			}
+		}
+		
+	}
+}
+void MoveDown()
+{
+	if (Y.y + 6 <= 36)
+	{
+		ErasePerson();
+		Y.y += 6;
+		BigText("Person.txt", 240, Y.x, Y.y);
+	}
+}
+void MoveRight()
+{
+	if (Y.x + 3 < 130)
+	{
+		ErasePerson();
+		Y.x += 3;
+		BigText("Person.txt", 240, Y.x, Y.y);
+	}
+}
+void MoveLeft()
+{
+	if (Y.x - 3 > 10)
+	{
+		ErasePerson();
+		Y.x -= 3;
+		BigText("Person.txt", 240, Y.x, Y.y);
+	}
+}
+
+bool Impact()
+{
+	
+	int i = 4;
+	while (5.5 + (i * 6) > Y.y) i--;
+	for (int j = 0; j < a.n[i]; j++)
+	{
+		if (a.x[i][j] <= Y.x && a.x[i][j] + 20 >= Y.x && Y.y >= (5.5 + i * 6) && Y.y < (5.5 + (i + 1) * 6))
+		{
+			return true; // kiem tra nguoi co nam trong doan duong i hay khong va co o vi tri da co xe san hay khong 
+		}
+	}
+	return false;
+}
+
+void YDead()
+{
+	STT = 0;
+	system("cls");
+	cout << "DEAD!";
+	cout << "\n Nhap 's' de choi lai hoac nhap 'e' de thoat: ";
+	char tmp=' ';
+	while (tmp!='s' && tmp !='e')
+	tmp = _getch();
+	if (tmp == 's')
+		InGame();
+	else if (tmp == 'e')
+		ExitGame();
+}
+
+void Finish()
+{
+	if (spd == 3) spd = 1;
+	else spd++;
+	Score += 100;
+	Y.x = 50;
+	Y.y = 36;
+	Moving = 'd';
+}
+void SubThread()
+{
+	while (1)
+	{
+		if (STT)
+		{
+			switch (Moving)
+			{
+			case 'a':
+				MoveLeft(); break;
+			case 'd':
+				MoveRight(); break;
+			case 's':
+				MoveDown(); break;
+			case 'w':
+				MoveUp(); break;
+			}
+			Moving = ' ';
+			EraseCar();
+			StopCar();
+			MoveCar();
+			DrawCar();
+			if (Impact())
+			{
+				YDead();
+			}
+			if (Y.y < 5.5)
+			{
+				Finish();
+			}
+			MENU menu;
+			menu.x = X_CENTER + 52;
+			menu.y = Y_CENTER - 11;
+			Text("Score :", 240, menu.x, menu.y);
+			cout << Score;
+			SetColor(240);
+			Sleep(100);
+		}
+	}
+	
+}
+void ControlInGame()
+{
+	thread t1(SubThread);
+	while (1)
+	{
+		if (STT)
+		{
+			char press;
+			press = _getch();
+			if (press == 'p')
+			{
+				SuspendThread((HANDLE)t1.native_handle());
+				PauseGame();
+				char press1;
+				press1 = _getch();
+				if (press1 == 'r') {
+					ClearScreen(45, 10, X_CENTER + 50, Y_CENTER - 16);
+					GoTo(0, 0);
+					ResumeThread((HANDLE)t1.native_handle());
+				}
+				else if (press1 == 'e') {
+					ExitGame();
+				}
+			}
+			else if (press == 'a' || press == 'd' || press == 's' || press == 'w')
+			{
+				Moving = press;
+			}
+		}
+	}
+}
+
 void InGame()
 {
-	DrawBoard(0, 0, 10, 5.5, 110, 30);
+	system("cls");
+	Score = 0;
+	CreateCar();
+	DrawBoard(0, 0, 10, 5.5, 120, 30);
+	BigText("Person.txt", 240, 50, 36);
+	Y.x = 50; Y.y = 36;
+	Moving = 'd';
+	spd = 1;
+	STT = 1;
+	DrawCar();
 	ControlInGame();
 }
 
 void PauseGame()
 {
 	MENU menu;
-	menu.x = X_CENTER + 51;
+	menu.x = X_CENTER + 52;
 	menu.y = Y_CENTER - 11;
-	Box(124, 45, 10, X_CENTER + 43, Y_CENTER - 16);
+	Box(124, 45, 10, X_CENTER + 50, Y_CENTER - 16);
 	Text("*********** PAUSE ************", 117, menu.x, menu.y - 2);
 	Text("   Press 'r' to Resume Game   ", 124, menu.x, menu.y);
 	Text("    Press 's' to Save Game    ", 124, menu.x, menu.y + 1);
