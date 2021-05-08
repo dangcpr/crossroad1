@@ -3,6 +3,16 @@
 #include "Ctrl.h"
 #include "Menu.h"
 
+void ErasePerson();
+void MoveUp();
+void MoveDown();
+void MoveLeft();
+void MoveRight();
+void DrawCar();
+void MoveCar();
+void EraseCar();
+void SubThread();
+
 void ControlInGame(); //
 void InGame();
 void ExitGame();
