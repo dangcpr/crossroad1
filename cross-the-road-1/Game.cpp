@@ -1,19 +1,8 @@
 #include "Game.h"
 #include "Data.h"
 #include "Menu.h"
-#include <thread>
 
-struct Cars
-{
-	int n[5];
-	int x[5][3];
-	bool State[5];
-};
 
-struct you
-{
-	int x, y;
-};
 int timeStart[5], timeCur[5];
 you Y;
 Cars a;
@@ -22,7 +11,6 @@ char Moving;
 bool STT;
 bool mark[130];
 int Score = 0;
-
 void CreateCar()
 {
 	srand(time(NULL));

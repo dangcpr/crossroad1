@@ -40,6 +40,8 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <thread>
+
 
 #define SAVED_LIST "FileDaLuu.txt" //Ten cac file game duoc save
 #define PLAYER_LIST "DSNguoiChoi.txt" //Thong tin cac player da choi game
@@ -56,4 +58,15 @@ struct Name
 {
 	int n;
 	string* s;
+};
+struct Cars
+{
+	int n[5];
+	int x[5][3];
+	bool State[5];
+};
+
+struct you
+{
+	int x, y;
 };

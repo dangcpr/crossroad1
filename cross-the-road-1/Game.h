@@ -3,12 +3,20 @@
 #include "Ctrl.h"
 #include "Menu.h"
 
+
+
+void CreateCar();
+void StopCar();
+void DrawCar();
+
 void ErasePerson();
 void MoveUp();
 void MoveDown();
 void MoveLeft();
 void MoveRight();
-void DrawCar();
+bool Impact();
+void YDead();
+void Finish();
 void MoveCar();
 void EraseCar();
 void SubThread();
@@ -23,4 +31,4 @@ void DrawBoard(int row, int col, int x, int y, int width, int height); //Ve lan 
 void ClearScreen(int width, int height, int x, int y); //Xoa man hinh
 
 //Luu file
-void SaveGame();
+//void SaveGame();
