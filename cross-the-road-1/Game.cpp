@@ -6,7 +6,7 @@
 int timeStart[5], timeCur[5];
 you Y;
 Cars a;
-int spd;
+int spd=1;
 char Moving;
 bool STT;
 bool mark[130];
@@ -228,12 +228,14 @@ void YDead()
 	system("cls");
 	cout << "DEAD!";
 	cout << "\n Nhap 's' de choi lai hoac nhap 'e' de thoat: ";
-	char tmp;
-	while (tmp!='s' && tmp !='e')
+	char tmp=' ';
+	while (tmp != 's' && tmp !='e')
 	tmp = _getch();
 	if (tmp == 's')
 	{
 		system("cls");
+		Score = 0;
+		spd = 1;
 		InGame();
 	}
 	else if (tmp == 'e')
@@ -315,6 +317,9 @@ void ControlInGame()
 				else if (press1 == 'e') {
 					ExitGame();
 				}
+				else if (press1 == 's') {
+					SaveGame();
+				}
 			}
 			else if (press == 'a' || press == 'd' || press == 's' || press == 'w')
 			{
@@ -327,13 +332,13 @@ void ControlInGame()
 void InGame()
 {
 	system("cls");
-	Score = 0;
+	//Score = 0;
 	CreateCar();
 	DrawBoard(0, 0, 10, 5.5, 120, 30);
 	BigText("Person.txt", 240, 50, 36);
 	Y.x = 50; Y.y = 36;
 	Moving = 'd';
-	spd = 1;
+	//spd = 1;
 	STT = 1;
 	DrawCar();
 	ControlInGame();
@@ -388,4 +393,45 @@ void ClearScreen(int width, int height, int x, int y)
 		for (int j = 0; j < width; j++)
 			Text(" ", 255, x + j, y + i);
 	}
+}
+
+void SaveGame()
+{
+	string s;
+	MENU menu;
+	menu.x = X_CENTER + 52;
+	menu.y = Y_CENTER - 11;
+	Box(124, 45, 10, X_CENTER + 50, Y_CENTER - 16);
+	Text("******* SAVE GAME ********", 117, menu.x, menu.y - 2);
+	Text("Enter your name: ", 124, menu.x, menu.y);
+	getline(cin, s);
+	string s1 = s + ".txt";
+	ofstream f;
+	f.open("FileDaLuu.txt", ios::app);
+	f << s;
+	f << endl;
+	f.close();
+	ofstream f1;
+	f1.open(s1, ios::trunc);
+	f1 << Score;
+	f1 << " ";
+	f1 << spd;
+	f1 << endl;
+	f1.close();
+	ofstream f2;
+	f2.open("DSNguoiChoi.txt");
+	f2 << s;
+	f2 << endl;
+	f2 << Score;
+	f2 << endl;
+	f2.close();
+}
+void LoadGame(string s)
+{
+	ifstream fb;
+	fb.open(s + ".txt");
+	fb >> Score;
+	fb >> spd;
+	fb.close();
+	InGame();
 }

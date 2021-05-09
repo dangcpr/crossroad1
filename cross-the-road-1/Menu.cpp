@@ -144,8 +144,14 @@ void ShowFile()
 	Text(File[File.size() - 1], 124, menu.x, menu.y - 1);
 	Text(File[File.size() - 2], 124, menu.x, menu.y);
 	Text(File[File.size() - 3], 124, menu.x, menu.y + 1);
+	int i;
+	for (i = 0; i < File.size(); i++)
+	{
+		Text(File[File.size() + i], 124, menu.x, menu.y - i - 1);
+	}
 	InputFileName(s, menu.x, menu.y + 3);
 	SetColor(240);
+	LoadGame(s);
 }
 bool FileAvailable(string s)
 {
@@ -204,5 +210,46 @@ void Help() //Tro giup
 	if (press == 'r')
 	{
 		MenuControl();
+	}
+}
+
+void ReadPlayerInf(ifstream& f, player& x)
+{
+	getline(f, x.name);
+	f >> x.score;
+}
+void Ranking()
+{
+	vector<player> plist;
+	plist.resize(0);
+	player tmp;
+	ifstream f;
+	f.open("DSNguoiChoi.txt", ios::in);
+	while (!f.eof())
+	{
+		ReadPlayerInf(f, tmp);
+		plist.push_back(tmp);
+	}
+	for (int i = 0; i < plist.size() - 1; i++)
+		for (int j = i + 1; j < plist.size(); j++)
+		{
+			if (plist[i].score < plist[j].score)
+			{
+				string m = plist[i].name;
+				plist[i].name = plist[j].name;
+				plist[j].name = m;
+				int n = plist[i].score;
+				plist[i].score = plist[j].score;
+				plist[i].score = n;
+			}
+		}
+	f.close();
+	ofstream fb;
+	fb.open("Rank.txt", ios::trunc);
+	for (int i = 0; i < 4; i++)
+	{
+		fb << plist[i].name;
+		fb << " ";
+		fb << plist[i].score;
 	}
 }

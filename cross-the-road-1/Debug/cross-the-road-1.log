@@ -1,9 +1,1 @@
-﻿  Game.cpp
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(16,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(42,15): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(44,15): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(56,43): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(61,45): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(82,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(332,22): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-  cross-the-road-1.vcxproj -> D:\crossroad1\crossroad1\Debug\cross-the-road-1.exe
+﻿  cross-the-road-1.vcxproj -> C:\Users\HAI DANG\Downloads\crossroad1\New folder\Debug\cross-the-road-1.exe

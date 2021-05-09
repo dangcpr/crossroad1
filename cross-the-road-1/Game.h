@@ -31,4 +31,7 @@ void DrawBoard(int row, int col, int x, int y, int width, int height); //Ve lan 
 void ClearScreen(int width, int height, int x, int y); //Xoa man hinh
 
 //Luu file
-//void SaveGame();
+void SaveGame();
+
+//Tai file
+void LoadGame(string s);

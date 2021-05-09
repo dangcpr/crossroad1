@@ -4,7 +4,12 @@
 void CreateConsoleWindow(int pWidth, int pHeight);
 void FixConsoleWindow();
 void GoTo(int x, int y);//Di chuyen tren khap man hinh console
-
+//Thong tin nguoi choi
+struct player
+{
+	string name;
+	int score;
+};
 //Ham do hoa
 void SetColor(int color);//Mau chu + mau nen
 void Text(string name, int color, int x, int y);//In text
@@ -21,3 +26,6 @@ void ShowFile();//Man hinh hien ten file
 bool FileAvailable(string s);//Kiem tra file co ton tai khong
 void InputFileName(string& s, int x, int y);//Nhap ten file
 void Help();
+void ReadPlayerInf(ifstream& f, player& x);//Doc thong tin nguoi choi
+void Ranking();//Xep hang 
+ 
