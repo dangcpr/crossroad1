@@ -1,4 +1,3 @@
-
 #include "Ctrl.h"
 
 int main(void)
