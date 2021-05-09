@@ -228,13 +228,18 @@ void YDead()
 	system("cls");
 	cout << "DEAD!";
 	cout << "\n Nhap 's' de choi lai hoac nhap 'e' de thoat: ";
-	char tmp=' ';
+	char tmp;
 	while (tmp!='s' && tmp !='e')
 	tmp = _getch();
 	if (tmp == 's')
+	{
+		system("cls");
 		InGame();
+	}
 	else if (tmp == 'e')
+	{
 		ExitGame();
+	}
 }
 
 void Finish()
