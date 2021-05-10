@@ -222,7 +222,7 @@ bool Impact()
 	return false;
 }
 
-void YDead()
+void YDead(void)
 {
 	STT = 0;
 	system("cls");
@@ -253,7 +253,7 @@ void Finish()
 	Y.y = 36;
 	Moving = 'd';
 }
-void SubThread()
+void SubThread(void)
 {
 	while (1)
 	{
@@ -294,7 +294,7 @@ void SubThread()
 	}
 	
 }
-void ControlInGame()
+void ControlInGame(void)
 {
 	thread t1(SubThread);
 	while (1)
