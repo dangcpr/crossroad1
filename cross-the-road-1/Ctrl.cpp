@@ -21,6 +21,7 @@ void MenuControl()
 		}
 		else if (press == '3')
 		{
+			system("cls");
 			Ranking();
 			Box(124, 75, 27, X_CENTER - 34, Y_CENTER - 15);
 			Text("Top 5 best players", 117, X_CENTER - 34, Y_CENTER - 15);
@@ -30,6 +31,7 @@ void MenuControl()
 			press = _getch();
 			if (press == 'r')
 			{
+				SetColor(240);
 				MenuControl();
 			}
 		}

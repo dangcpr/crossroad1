@@ -1,9 +1,9 @@
-﻿  Game.cpp
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(16,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(42,15): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(44,15): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(56,43): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(61,45): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(82,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(332,22): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(232): error C4700: uninitialized local variable 'tmp' used
+﻿  Menu.cpp
+D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(91,20): warning C4018: '<': signed/unsigned mismatch
+D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(161,20): warning C4018: '<': signed/unsigned mismatch
+D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(173,20): warning C4018: '<': signed/unsigned mismatch
+D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(180,7): warning C4101: 'menu': unreferenced local variable
+D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(236,20): warning C4018: '<': signed/unsigned mismatch
+D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(237,25): warning C4018: '<': signed/unsigned mismatch
+D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(254,21): warning C4018: '<': signed/unsigned mismatch
+  cross-the-road-1.vcxproj -> D:\crossroad1\crossroad1\Debug\cross-the-road-1.exe

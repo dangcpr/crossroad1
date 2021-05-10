@@ -412,14 +412,14 @@ void SaveGame()
 	f << endl;
 	f.close();
 	ofstream f1;
-	f1.open(s1, ios::trunc);
+	f1.open(s1, ios::app);
 	f1 << Score;
 	f1 << " ";
 	f1 << spd;
 	f1 << endl;
 	f1.close();
 	ofstream f2;
-	f2.open("DSNguoiChoi.txt");
+	f2.open("DSNguoiChoi.txt", ios::app);
 	f2 << s;
 	f2 << endl;
 	f2 << Score;

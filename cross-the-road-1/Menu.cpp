@@ -142,13 +142,15 @@ void ShowFile()
 	Box(124, 53, 13, X_CENTER - 25, Y_CENTER + 5);
 	Text("*********** FILES ************", 117, menu.x, menu.y - 3);
 	Text(File[File.size() - 1], 124, menu.x, menu.y - 1);
-	Text(File[File.size() - 2], 124, menu.x, menu.y);
-	Text(File[File.size() - 3], 124, menu.x, menu.y + 1);
-	int i;
-	for (i = 0; i < File.size(); i++)
-	{
-		Text(File[File.size() + i], 124, menu.x, menu.y - i - 1);
-	}
+	if (File.size() >= 2)
+		Text(File[File.size() - 2], 124, menu.x, menu.y);
+	if (File.size() >= 3)
+		Text(File[File.size() - 3], 124, menu.x, menu.y + 1);
+	//int i;
+	//for (i = 0; i < File.size(); i++)
+	//{
+		//Text(File[File.size() + i], 124, menu.x, menu.y - i - 1);
+	//}
 	InputFileName(s, menu.x, menu.y + 3);
 	SetColor(240);
 	LoadGame(s);
@@ -217,6 +219,7 @@ void ReadPlayerInf(ifstream& f, player& x)
 {
 	getline(f, x.name);
 	f >> x.score;
+	f.ignore();
 }
 void Ranking()
 {
@@ -246,10 +249,25 @@ void Ranking()
 	f.close();
 	ofstream fb;
 	fb.open("Rank.txt", ios::trunc);
-	for (int i = 0; i < 4; i++)
+	if (plist.size() <= 5)
 	{
-		fb << plist[i].name;
-		fb << " ";
-		fb << plist[i].score;
+		for (int i = 0; i < plist.size(); i++)
+		{
+			fb << plist[i].name;
+			fb << " ";
+			fb << plist[i].score;
+			fb << endl;
+		}
 	}
+	else
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			fb << plist[i].name;
+			fb << " ";
+			fb << plist[i].score;
+			fb << endl;
+		}
+	}
+	
 }
