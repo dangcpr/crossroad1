@@ -233,22 +233,20 @@ void Ranking()
 		ReadPlayerInf(f, tmp);
 		plist.push_back(tmp);
 	}
+	plist.resize(plist.size() - 1);
 	for (int i = 0; i < plist.size() - 1; i++)
 		for (int j = i + 1; j < plist.size(); j++)
 		{
 			if (plist[i].score < plist[j].score)
 			{
-				string m = plist[i].name;
-				plist[i].name = plist[j].name;
-				plist[j].name = m;
-				int n = plist[i].score;
-				plist[i].score = plist[j].score;
-				plist[i].score = n;
+				player m = plist[i];
+				plist[i] = plist[j];
+				plist[j] = m;
 			}
 		}
 	f.close();
 	ofstream fb;
-	fb.open("Rank.txt", ios::trunc);
+	fb.open("Rank.txt", ios::out);
 	if (plist.size() <= 5)
 	{
 		for (int i = 0; i < plist.size(); i++)

@@ -412,7 +412,7 @@ void SaveGame()
 	f << endl;
 	f.close();
 	ofstream f1;
-	f1.open(s1, ios::app);
+	f1.open(s1, ios::out);
 	f1 << Score;
 	f1 << " ";
 	f1 << spd;

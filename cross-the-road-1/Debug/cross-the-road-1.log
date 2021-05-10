@@ -1,9 +1,2 @@
-﻿  Menu.cpp
-D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(91,20): warning C4018: '<': signed/unsigned mismatch
-D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(161,20): warning C4018: '<': signed/unsigned mismatch
-D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(173,20): warning C4018: '<': signed/unsigned mismatch
-D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(180,7): warning C4101: 'menu': unreferenced local variable
-D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(236,20): warning C4018: '<': signed/unsigned mismatch
-D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(237,25): warning C4018: '<': signed/unsigned mismatch
-D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(254,21): warning C4018: '<': signed/unsigned mismatch
+﻿  Ctrl.cpp
   cross-the-road-1.vcxproj -> D:\crossroad1\crossroad1\Debug\cross-the-road-1.exe

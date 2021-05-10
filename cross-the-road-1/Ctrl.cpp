@@ -24,7 +24,7 @@ void MenuControl()
 			system("cls");
 			Ranking();
 			Box(124, 75, 27, X_CENTER - 34, Y_CENTER - 15);
-			Text("Top 5 best players", 117, X_CENTER - 34, Y_CENTER - 15);
+			Text("****** TOP 5 BEST PLAYERS ******", 117, X_CENTER - 12, Y_CENTER - 15);
 			BigText("Rank.txt", 124, X_CENTER - 15, Y_CENTER - 10);
 			Text("Press 'r' to return to the menu screen.", 124, X_CENTER - 10, Y_CENTER - 5);
 			char press;
