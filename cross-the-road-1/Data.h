@@ -18,10 +18,10 @@
 #define SPACE 32
 #define ENTER 13
 #define ESC 27
-#define ARROW_UP 72
-#define ARROW_DOWN 80
-#define ARROW_LEFT 75
-#define ARROW_RIGHT 77
+#define KEY_UP 72
+#define KEY_DOWN 80
+#define KEY_LEFT 75
+#define KEY_RIGHT 77
 #define TOP_LEFT (char)218
 #define TOP_RIGHT (char)191
 #define BOTTOM_LEFT (char)192

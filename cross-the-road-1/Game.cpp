@@ -251,23 +251,24 @@ void Finish()
 	Score += 100;
 	Y.x = 50;
 	Y.y = 36;
-	Moving = 'd';
+	Moving = KEY_RIGHT;
 }
 void SubThread(void)
 {
+	thread t1(SubThread);
 	while (1)
 	{
 		if (STT)
 		{
 			switch (Moving)
 			{
-			case 'a':
+			case KEY_LEFT:
 				MoveLeft(); break;
-			case 'd':
+			case KEY_RIGHT:
 				MoveRight(); break;
-			case 's':
+			case KEY_DOWN:
 				MoveDown(); break;
-			case 'w':
+			case KEY_UP:
 				MoveUp(); break;
 			}
 			Moving = ' ';
@@ -278,6 +279,7 @@ void SubThread(void)
 			if (Impact())
 			{
 				YDead();
+				TerminateThread((HANDLE)t1.native_handle(), 0);
 			}
 			if (Y.y < 5.5)
 			{
@@ -321,7 +323,7 @@ void ControlInGame(void)
 					SaveGame();
 				}
 			}
-			else if (press == 'a' || press == 'd' || press == 's' || press == 'w')
+			else if (press == KEY_LEFT || press == KEY_RIGHT || press == KEY_DOWN || press == KEY_UP)
 			{
 				Moving = press;
 			}

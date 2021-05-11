@@ -1,13 +1,13 @@
 -------- HELP FOR PLAYER --------
-       Press 'w' to go up. 
-       Press 's' to go up. 
-       Press 'a' to go left. 
-       Press 'd' to go right. 
+   Press Up Arrow Key to go up. 
+  Press Down Arrow Key to go up. 
+ Press Left Arrow Key to go left. 
+Press Right Arrow Key to go right. 
 	     
                ------
 
      Press 's' to save the game.
-     Press 'p' to stop the game.
+     Press 'p' to pause the game.
 	
                ------
       After finishing the game:  
