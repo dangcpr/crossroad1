@@ -255,7 +255,7 @@ void Finish()
 }
 void SubThread(void)
 {
-	thread t1(SubThread);
+	//thread t1(SubThread);
 	while (1)
 	{
 		if (STT)
@@ -279,7 +279,7 @@ void SubThread(void)
 			if (Impact())
 			{
 				YDead();
-				TerminateThread((HANDLE)t1.native_handle(), 0);
+				//TerminateThread((HANDLE)t1.native_handle(), 0);
 			}
 			if (Y.y < 5.5)
 			{
