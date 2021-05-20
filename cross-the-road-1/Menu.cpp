@@ -59,8 +59,8 @@ void BoxLoading(int color, int width, int height, int x, int y) //Man hinh loadi
 {
 
 	int n = 0;
-	BigText("Logo.txt", 240, 20, 3);
-	BigText("LogoCar.txt", 240, 43, 15);
+	BigText("Logo.txt", 240, 27, 3);
+	BigText("LogoCar.txt", 240, 50, 15);
 	for (int i = 0; i < height; i++)
 	{
 		GoTo(x, y + i);
@@ -102,15 +102,15 @@ MENU DisplayMenu()
 
 	system("cls");
 
-	BigText("Logo.txt", 240, 20, 3);
-	BigText("LogoCar.txt", 240, 43, 15);
+	BigText("Logo.txt", 240, 27, 3);
+	BigText("LogoCar.txt", 240, 50, 15);
 	Box(124, 53, 13, X_CENTER - 25, Y_CENTER + 5);
 	Text("*********** MENU ************", 117, menu.x, menu.y - 2);
 	Text("   Press '1' to Start Game   ", 124, menu.x, menu.y);
 	Text("   Press '2' to Load Game    ", 124, menu.x, menu.y + 1);
-	Text("    Press '3' to Ranking     ", 124, menu.x, menu.y + 2);
-	Text("      Press '4' to Help      ", 124, menu.x, menu.y + 3);
-	Text("    Press 'e' to Exit Game   ", 124, menu.x, menu.y + 4);
+	Text("   Press '3' to Ranking     ", 124, menu.x, menu.y + 2);
+	Text("   Press '4' to Help      ", 124, menu.x, menu.y + 3);
+	Text("   Press 'e' to Exit Game   ", 124, menu.x, menu.y + 4);
 	SetColor(240);
 	return menu;
 }
@@ -153,7 +153,7 @@ void ShowFile()
 	//}
 	InputFileName(s, menu.x, menu.y + 3);
 	SetColor(240);
-	LoadGame(s);
+	//LoadGame(s);
 }
 bool FileAvailable(string s)
 {
@@ -181,6 +181,7 @@ void InputFileName(string& s, int x, int y)
 	string s1 = "Nhap ten file: ", s2 = "Sai ten file!", s3 = "Nhap lai ten: ";
 	vector<string> File = FileSaved("FileDaLuu.txt");
 	Text(s1, 124, x, y);
+	fflush(stdin);
 	getline(cin, s);
 	while (FileAvailable(s) == 0)
 	{
@@ -195,12 +196,14 @@ void InputFileName(string& s, int x, int y)
 		Text(s2, 124, x, y);
 		Clear(s, s3, x, y + 1);
 		Text(s3, 124, x, y + 1);
+		fflush(stdin);
 		getline(cin, s);
 
 	}
 	Clear(s, s2, x, y);
 	Clear(s, s3, x, y + 1);
 	Text("Dung ten file! ", 124, x, y);
+	LoadGame(s);
 }
 void Help() //Tro giup
 {

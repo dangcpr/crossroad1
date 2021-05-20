@@ -8,7 +8,7 @@ int main(void)
     //bool STATE; // Trạng thái sống/chết của người qua đường
     CreateConsoleWindow(WIDTH, HEIGHT);
     FixConsoleWindow();
-    BoxLoading(32, 100, 1, 35, 30);
+    BoxLoading(32, 100, 1, 43, 30);
     Sleep(1000);
     MenuControl();
     return 0;

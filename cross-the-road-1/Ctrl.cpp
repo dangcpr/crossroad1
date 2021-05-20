@@ -4,11 +4,11 @@
 
 void MenuControl()
 {
+	SetColor(240);
 	DisplayMenu();
 	char press;
-	do
 	{
-		press = _getch();
+		do { press = _getch(); } while (press != '1' && press != '2' && press != '3' && press != '4' && press != 'r' && press != 'e');
 		if (press == '1')
 		{
 			system("cls");
@@ -28,7 +28,7 @@ void MenuControl()
 			BigText("Rank.txt", 124, X_CENTER - 15, Y_CENTER - 10);
 			Text("Press 'r' to return to the menu screen.", 124, X_CENTER - 10, Y_CENTER - 5);
 			char press;
-			press = _getch();
+			do { press = _getch(); } while (press != 'r');
 			if (press == 'r')
 			{
 				SetColor(240);
@@ -40,8 +40,11 @@ void MenuControl()
 			system("cls");
 			Help();
 		}
-	} while (press != 'e');
-	system("cls");
-	ExitGame();
+		else if (press == 'e')
+		{
+			system("cls");
+			ExitGame();
+		}
+	} 
 	return;
 }

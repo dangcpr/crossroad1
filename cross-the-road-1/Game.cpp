@@ -149,13 +149,14 @@ void MoveUp()
 			MENU menu;
 			menu.x = X_CENTER + 52;
 			menu.y = Y_CENTER - 11;
-			Box(124, 45, 10, X_CENTER + 50, Y_CENTER - 16);
+			Box(124, 40,20, X_CENTER + 50, Y_CENTER - 16);
 			Text("*********** PAUSE ************", 117, menu.x, menu.y - 2);
 			Text(" Va vao nguoi khac se bi tru 50 diem ", 124, menu.x, menu.y);
-			Text("    An 'w' de dong y    ", 124, menu.x, menu.y + 1);
+			Text("    An 'w' de dong y    ", 124, menu.x, menu.y + 1);   
 			Text("    An 's' de tu choi    ", 124, menu.x, menu.y + 2);
-			while (tmp!='w' && tmp!='s')
-			tmp = _getch();
+			do {
+				tmp = _getch();
+			} while (tmp != 'w' && tmp != 's');
 			if (tmp == 'w')
 			{
 				ClearScreen(45, 10, X_CENTER + 50, Y_CENTER - 16);
@@ -221,29 +222,60 @@ bool Impact()
 	}
 	return false;
 }
+void GameOver(void)
+{
+	for (int i = 0; i <= 50; i++)
+	{
+		BigText("Car.txt", 240, i + 11, 30);
+	}
+}
+bool PlayerAvailable(string s)
+{
+	vector<string> File = FileSaved("DSNguoiChoi.txt");
+	for (int i = 0; i < File.size(); i++)
+	{
+		if (s == File[i])
+		{
+			return 1;
+		}
 
+	}
+	return 0;
+}
 void YDead(void)
 {
+	string s;
 	STT = 0;
-	system("cls");
 	thread t1(InGame);
 	TerminateThread((HANDLE)t1.native_handle(), 0);
-	cout << "DEAD!";
-	cout << "\n Nhap 's' de choi lai hoac nhap 'e' de thoat: ";
-	char tmp=' ';
-	while (tmp != 's' && tmp !='e')
-	tmp = _getch();
-	if (tmp == 's')
-	{
-		system("cls");
-		Score = 0;
-		spd = 1;
-		InGame();
-	}
-	else if (tmp == 'e')
-	{
-		ExitGame();
-	}
+	EraseCar();
+	ErasePerson();
+	system("cls");
+	BigText("Skull.txt", 240, X_CENTER - 20, 1);
+	Box(124, 70, 10, X_CENTER - 40, 30);
+	Text("Game Over. Please type your name to save your infomation: ", 112, X_CENTER - 35 , 31);
+	int t = 0;
+	do {
+		std::fflush(stdin);
+		getline(std::cin, s);
+		if (PlayerAvailable(s)) { 
+			Text("This name is available. Please type again. ", 112, X_CENTER - 35 , 32 + t);
+			t++;
+			//GoTo(X_CENTER - 55, 19 + t);
+		};
+	} while (PlayerAvailable(s));
+	ofstream f;
+	f.open("DSNguoiChoi.txt", ios::app);
+	f << s;
+	f << endl;
+	f << Score;
+	f << endl;
+	f.close();
+	Text("Saved successfully.", 112, X_CENTER - 35, 32 + t);
+	t++;
+	Text("Press any key to return to main menu.", 112, X_CENTER - 35, 32 + t);
+	_getch();
+	MenuControl();
 }
 
 void Finish()
@@ -303,25 +335,30 @@ void ControlInGame(void)
 	{
 		if (STT)
 		{
-			char press;
+			char press, press1;
 			press = _getch();
 			if (press == 'p')
 			{
 				SuspendThread((HANDLE)t1.native_handle());
 				PauseGame();
-				char press1;
-				press1 = _getch();
-				if (press1 == 'r') {
-					ClearScreen(45, 10, X_CENTER + 50, Y_CENTER - 16);
-					GoTo(0, 0);
-					ResumeThread((HANDLE)t1.native_handle());
-				}
-				else if (press1 == 'e') {
-					ExitGame();
-				}
-				else if (press1 == 's') {
-					SaveGame();
-				}
+				do {
+					press1 = _getch();
+					if (press1 == 'r') {
+						ClearScreen(45, 10, X_CENTER + 50, Y_CENTER - 16);
+						GoTo(0, 0);
+						ResumeThread((HANDLE)t1.native_handle());
+					}
+					else if (press1 == 'e') {
+						ExitGame();
+					}
+					else if (press1 == 's') {
+						SaveGame();
+					}
+					else if (press1 == 'm') {
+						system("cls");
+						MenuControl();
+					}
+				}while (press1 != 'p' && press1 != 'e' && press1 != 's' && press1 != 'm');
 			}
 			else if (press == KEY_LEFT || press == KEY_RIGHT || press == KEY_DOWN || press == KEY_UP)
 			{
@@ -334,6 +371,7 @@ void ControlInGame(void)
 void InGame()
 {
 	system("cls");
+	//SetColor(240);
 	//Score = 0;
 	CreateCar();
 	DrawBoard(0, 0, 10, 5.5, 120, 30);
@@ -349,19 +387,22 @@ void InGame()
 void PauseGame()
 {
 	MENU menu;
-	menu.x = X_CENTER + 52;
-	menu.y = Y_CENTER - 11;
-	Box(124, 45, 10, X_CENTER + 50, Y_CENTER - 16);
+	menu.x = X_CENTER + 52; //X_CENTER + 52;
+	menu.y = Y_CENTER -11; //Y_CENTER - 11;
+	//DrawBoard(2, 1, 54, 15, 45, 10); 
+	Box(124, 40, 20, X_CENTER + 50, Y_CENTER - 16);
 	Text("*********** PAUSE ************", 117, menu.x, menu.y - 2);
-	Text("   Press 'r' to Resume Game   ", 124, menu.x, menu.y);
+	Text("    Press 'r' to Resume Game  ", 124, menu.x, menu.y);
 	Text("    Press 's' to Save Game    ", 124, menu.x, menu.y + 1);
-	Text("    Press 'e' to Exit Game    ", 124, menu.x, menu.y + 2);
+	Text("    Press 'e' to Exit Game    ", 124, menu.x, menu.y + 3);
+	Text("    Press 'm' to Back To Menu ", 124, menu.x, menu.y + 2);
 }
 void ExitGame()
 {
 	SetColor(255);
 	system("cls");
-	BigText("ThankYou.txt", 71, 40, 15);
+	BigText("ThankYou.txt", 71, 45, 15);
+	_getch();
 }
 void DrawBoard(int row, int col, int x, int y, int width, int height)
 {
@@ -401,12 +442,24 @@ void SaveGame()
 {
 	string s;
 	MENU menu;
-	menu.x = X_CENTER + 52;
-	menu.y = Y_CENTER - 11;
-	Box(124, 45, 10, X_CENTER + 50, Y_CENTER - 16);
-	Text("******* SAVE GAME ********", 117, menu.x, menu.y - 2);
+	menu.x = X_CENTER + 52;    //X_CENTER + 52
+	menu.y = Y_CENTER - 11;     /*Y_CENTER - 11;*/
+	//Box(124, 10, 10, 56, 16); 
+	Box(124, 45, 10, X_CENTER + 50, Y_CENTER - 16); //+50 ,-16
+	Text("***** SAVE GAME ******", 117, menu.x, menu.y - 2);
 	Text("Enter your name: ", 124, menu.x, menu.y);
+	int t = 0;
+	do {
+	t = t + 2;
+	fflush(stdin);
 	getline(cin, s);
+	if (FileAvailable(s))
+	{
+		Text("This name is availble. Please type again.", 124, menu.x, menu.y + t);
+		t = t + 2;
+		GoTo(menu.x, menu.y + t);
+	}
+	} while (FileAvailable(s));
 	string s1 = s + ".txt";
 	ofstream f;
 	f.open("FileDaLuu.txt", ios::app);
@@ -427,6 +480,10 @@ void SaveGame()
 	f2 << Score;
 	f2 << endl;
 	f2.close();
+	Text("Saved successfully.", 124, menu.x, menu.y + t); t += 2;
+	Text("Press any key to return to main menu.",124, menu.x, menu.y + t);
+	_getch();
+	MenuControl();
 }
 void LoadGame(string s)
 {
@@ -435,5 +492,6 @@ void LoadGame(string s)
 	fb >> Score;
 	fb >> spd;
 	fb.close();
+	SetColor(240);
 	InGame();
 }
