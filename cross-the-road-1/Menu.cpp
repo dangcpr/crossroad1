@@ -131,6 +131,7 @@ void ShowFile()
 {
 	MENU menu;
 	vector<string> File = FileSaved("FileDaLuu.txt");
+	File.resize(File.size() - 1);
 	string s;
 	menu.x = X_CENTER - 13;
 	menu.y = Y_CENTER + 10;
@@ -262,7 +263,7 @@ void Ranking()
 	}
 	else
 	{
-		for (int i = 0; i < 4; i++)
+		for (int i = 0; i <= 4; i++)
 		{
 			fb << plist[i].name;
 			fb << " ";
