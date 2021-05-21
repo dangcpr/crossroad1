@@ -26,7 +26,7 @@ void MenuControl()
 			Box(124, 75, 27, X_CENTER - 34, Y_CENTER - 15);
 			Text("****** TOP 5 BEST PLAYERS ******", 117, X_CENTER - 12, Y_CENTER - 15);
 			BigText("Rank.txt", 124, X_CENTER - 15, Y_CENTER - 10);
-			Text("Press 'r' to return to the menu screen.", 124, X_CENTER - 10, Y_CENTER - 5);
+			Text("Press 'r' to return to the menu screen.", 124, X_CENTER - 16, Y_CENTER - 3);
 			char press;
 			do { press = _getch(); } while (press != 'r');
 			if (press == 'r')

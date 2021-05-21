@@ -256,7 +256,7 @@ void Ranking()
 		for (int i = 0; i < plist.size(); i++)
 		{
 			fb << plist[i].name;
-			fb << " ";
+			fb << setw(55);
 			fb << plist[i].score;
 			fb << endl;
 		}
@@ -266,7 +266,7 @@ void Ranking()
 		for (int i = 0; i <= 4; i++)
 		{
 			fb << plist[i].name;
-			fb << " ";
+			fb << setw(30 - plist[i].name.size());
 			fb << plist[i].score;
 			fb << endl;
 		}

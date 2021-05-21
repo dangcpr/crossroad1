@@ -41,6 +41,7 @@
 #include <fstream>
 #include <vector>
 #include <thread>
+#include <iomanip>
 
 
 #define SAVED_LIST "FileDaLuu.txt" //Ten cac file game duoc save

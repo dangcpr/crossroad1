@@ -387,10 +387,10 @@ void InGame()
 void PauseGame()
 {
 	MENU menu;
-	menu.x = X_CENTER + 52; //X_CENTER + 52;
-	menu.y = Y_CENTER -11; //Y_CENTER - 11;
+	menu.x = X_CENTER + 59; //X_CENTER + 52;
+	menu.y = Y_CENTER - 11; //Y_CENTER - 11;
 	//DrawBoard(2, 1, 54, 15, 45, 10); 
-	Box(124, 40, 20, X_CENTER + 50, Y_CENTER - 16);
+	Box(124, 50, 20, X_CENTER + 50, Y_CENTER - 16);
 	Text("*********** PAUSE ************", 117, menu.x, menu.y - 2);
 	Text("    Press 'r' to Resume Game  ", 124, menu.x, menu.y);
 	Text("    Press 's' to Save Game    ", 124, menu.x, menu.y + 1);
@@ -442,10 +442,10 @@ void SaveGame()
 {
 	string s;
 	MENU menu;
-	menu.x = X_CENTER + 52;    //X_CENTER + 52
+	menu.x = X_CENTER + 59;    //X_CENTER + 52
 	menu.y = Y_CENTER - 11;     /*Y_CENTER - 11;*/
 	//Box(124, 10, 10, 56, 16); 
-	Box(124, 45, 10, X_CENTER + 50, Y_CENTER - 16); //+50 ,-16
+	Box(124, 50, 20, X_CENTER + 50, Y_CENTER - 16); //+50 ,-16
 	Text("***** SAVE GAME ******", 117, menu.x, menu.y - 2);
 	Text("Enter your name: ", 124, menu.x, menu.y);
 	int t = 0;
