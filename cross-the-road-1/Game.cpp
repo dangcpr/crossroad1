@@ -402,7 +402,7 @@ void ExitGame()
 	SetColor(255);
 	system("cls");
 	BigText("ThankYou.txt", 71, 45, 15);
-	_getch();
+	SetColor(255);
 }
 void DrawBoard(int row, int col, int x, int y, int width, int height)
 {
