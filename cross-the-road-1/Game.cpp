@@ -339,23 +339,27 @@ void ControlInGame(void)
 			press = _getch();
 			if (press == 'p')
 			{
-				SuspendThread((HANDLE)t1.native_handle());
+				//SuspendThread((HANDLE)t1.native_handle());
+				STT = 0;
 				PauseGame();
 				//do {
 					press1 = _getch();
 					if (press1 == 'r') {
 						ClearScreen(50, 20, X_CENTER + 50, Y_CENTER - 16);
 						GoTo(0, 0);
-						ResumeThread((HANDLE)t1.native_handle());
+						//ResumeThread((HANDLE)t1.native_handle());
+						STT = 1;
 					}
 					else if (press1 == 'e') {
 						ExitGame();
 					}
 					else if (press1 == 's') {
+						TerminateThread((HANDLE)t1.native_handle(), 0);
 						SaveGame();
 					}
 					else if (press1 == 'm') {
 						system("cls");
+						TerminateThread((HANDLE)t1.native_handle(), 0);
 						MenuControl();
 					}
 				//}while (press1 != 'p' && press1 != 'e' && press1 != 's' && press1 != 'm');
@@ -380,6 +384,7 @@ void InGame()
 	Moving = 'd';
 	//spd = 1;
 	STT = 1;
+	Score = 0;
 	DrawCar();
 	ControlInGame();
 }
