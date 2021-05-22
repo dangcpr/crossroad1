@@ -474,16 +474,16 @@ void SaveGame()
 	f.close();
 	ofstream f1;
 	f1.open(s1, ios::out);
-	f1 << Score << " " << spd << " " << Y.x << " " << Y.y;
+	f1 << Score << " " << spd; //<< " " << Y.x << " " << Y.y;
 	f1 << endl;
 	f1.close();
-	ofstream f2;
+	/*ofstream f2;
 	f2.open("DSNguoiChoi.txt", ios::app);
 	f2 << s;
 	f2 << endl;
 	f2 << Score;
 	f2 << endl;
-	f2.close();
+	f2.close();*/
 	Text("Saved successfully.", 124, menu.x, menu.y + t); t += 2;
 	Text("Press any key to return to main menu.",124, menu.x, menu.y + t);
 	_getch();
@@ -493,7 +493,7 @@ void LoadGame(string s)
 {
 	ifstream fb;
 	fb.open(s + ".txt");
-	fb >> Score >> spd >> c >> d;
+	fb >> Score >> spd; //>> c >> d;
 	fb.close();
 	SetColor(240);
 	InGame();
