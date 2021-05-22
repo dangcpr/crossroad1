@@ -97,14 +97,14 @@ MENU DisplayMenu()
 {
 	MENU menu;
 	menu.choices = 3;
-	menu.x = X_CENTER - 13;
+	menu.x = X_CENTER - 23;
 	menu.y = Y_CENTER + 10;
 
 	system("cls");
 
 	BigText("Logo.txt", 240, 27, 3);
 	BigText("LogoCar.txt", 240, 50, 15);
-	Box(124, 53, 13, X_CENTER - 25, Y_CENTER + 5);
+	Box(124, 53, 13, X_CENTER - 35, Y_CENTER + 5);
 	Text("*********** MENU ************", 117, menu.x, menu.y - 2);
 	Text("   Press '1' to Start Game   ", 124, menu.x, menu.y);
 	Text("   Press '2' to Load Game    ", 124, menu.x, menu.y + 1);
@@ -133,16 +133,18 @@ void ShowFile()
 	vector<string> File = FileSaved("FileDaLuu.txt");
 	File.resize(File.size() - 1);
 	string s;
-	menu.x = X_CENTER - 13;
+	menu.x = X_CENTER - 23;
 	menu.y = Y_CENTER + 10;
 
 	system("cls");
 
 	BigText("Logo.txt", 240, 20, 3);
 	BigText("LogoCar.txt", 240, 43, 15);
-	Box(124, 53, 13, X_CENTER - 25, Y_CENTER + 5);
+	Box(124, 53, 13, X_CENTER - 35, Y_CENTER + 5);
 	Text("*********** FILES ************", 117, menu.x, menu.y - 3);
-	Text(File[File.size() - 1], 124, menu.x, menu.y - 1);
+	Text("Press Space->Enter to Return", 112, menu.x, menu.y + 6);
+	if (File.size() >= 1)
+		Text(File[File.size() - 1], 124, menu.x, menu.y - 1);
 	if (File.size() >= 2)
 		Text(File[File.size() - 2], 124, menu.x, menu.y);
 	if (File.size() >= 3)
@@ -238,7 +240,8 @@ void Ranking()
 		plist.push_back(tmp);
 	}
 	plist.resize(plist.size() - 1);
-	for (int i = 0; i < plist.size() - 1; i++)
+	for (int i = 0; i < plist.size(); i++)
+	{
 		for (int j = i + 1; j < plist.size(); j++)
 		{
 			if (plist[i].score < plist[j].score)
@@ -248,6 +251,7 @@ void Ranking()
 				plist[j] = m;
 			}
 		}
+	}
 	f.close();
 	ofstream fb;
 	fb.open("Rank.txt", ios::out);
@@ -271,5 +275,4 @@ void Ranking()
 			fb << endl;
 		}
 	}
-	
 }

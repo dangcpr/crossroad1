@@ -11,6 +11,7 @@ char Moving;
 bool STT;
 bool mark[130];
 int Score = 0;
+int c = 50, d = 36;
 void CreateCar()
 {
 	srand(time(NULL));
@@ -379,12 +380,12 @@ void InGame()
 	//Score = 0;
 	CreateCar();
 	DrawBoard(0, 0, 10, 5.5, 120, 30);
-	BigText("Person.txt", 240, 50, 36);
-	Y.x = 50; Y.y = 36;
+	Y.x = c; Y.y = d;
+	BigText("Person.txt", 240, Y.x, Y.y);
 	Moving = 'd';
 	//spd = 1;
 	STT = 1;
-	Score = 0;
+	//Score = 0;
 	DrawCar();
 	ControlInGame();
 }
@@ -473,9 +474,7 @@ void SaveGame()
 	f.close();
 	ofstream f1;
 	f1.open(s1, ios::out);
-	f1 << Score;
-	f1 << " ";
-	f1 << spd;
+	f1 << Score << " " << spd << " " << Y.x << " " << Y.y;
 	f1 << endl;
 	f1.close();
 	ofstream f2;
@@ -494,8 +493,7 @@ void LoadGame(string s)
 {
 	ifstream fb;
 	fb.open(s + ".txt");
-	fb >> Score;
-	fb >> spd;
+	fb >> Score >> spd >> c >> d;
 	fb.close();
 	SetColor(240);
 	InGame();

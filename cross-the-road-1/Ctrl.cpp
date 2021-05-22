@@ -22,13 +22,13 @@ void MenuControl()
 		else if (press == '3')
 		{
 			system("cls");
-			Ranking();
 			Box(124, 75, 27, X_CENTER - 34, Y_CENTER - 15);
 			Text("****** TOP 5 BEST PLAYERS ******", 117, X_CENTER - 12, Y_CENTER - 15);
 			BigText("Rank.txt", 124, X_CENTER - 15, Y_CENTER - 10);
 			Text("Press 'r' to return to the menu screen.", 124, X_CENTER - 16, Y_CENTER - 3);
+			Ranking();
 			char press;
-			do { press = _getch(); } while (press != 'r');
+			press = _getch();
 			if (press == 'r')
 			{
 				SetColor(240);
