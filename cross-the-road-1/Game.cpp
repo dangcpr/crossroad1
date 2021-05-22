@@ -341,10 +341,10 @@ void ControlInGame(void)
 			{
 				SuspendThread((HANDLE)t1.native_handle());
 				PauseGame();
-				do {
+				//do {
 					press1 = _getch();
 					if (press1 == 'r') {
-						ClearScreen(45, 10, X_CENTER + 50, Y_CENTER - 16);
+						ClearScreen(50, 20, X_CENTER + 50, Y_CENTER - 16);
 						GoTo(0, 0);
 						ResumeThread((HANDLE)t1.native_handle());
 					}
@@ -358,7 +358,7 @@ void ControlInGame(void)
 						system("cls");
 						MenuControl();
 					}
-				}while (press1 != 'p' && press1 != 'e' && press1 != 's' && press1 != 'm');
+				//}while (press1 != 'p' && press1 != 'e' && press1 != 's' && press1 != 'm');
 			}
 			else if (press == KEY_LEFT || press == KEY_RIGHT || press == KEY_DOWN || press == KEY_UP)
 			{
