@@ -2,16 +2,16 @@
 #include "Data.h"
 #include "Menu.h"
 
-
 int timeStart[5], timeCur[5];
 you Y;
 Cars a;
-int spd=1;
+int spd = 1;
 char Moving;
 bool STT;
 bool mark[130];
 int Score = 0;
 int c = 50, d = 36;
+
 void CreateCar()
 {
 	srand(time(NULL));
@@ -276,6 +276,7 @@ void YDead(void)
 	t++;
 	Text("Press any key to return to main menu.", 112, X_CENTER - 35, 32 + t);
 	_getch();
+	Score = 0; spd = 1;
 	MenuControl();
 }
 
@@ -346,6 +347,7 @@ void ControlInGame(void)
 				//do {
 					press1 = _getch();
 					if (press1 == 'r') {
+						
 						ClearScreen(50, 20, X_CENTER + 50, Y_CENTER - 16);
 						GoTo(0, 0);
 						//ResumeThread((HANDLE)t1.native_handle());
@@ -377,13 +379,13 @@ void InGame()
 {
 	system("cls");
 	//SetColor(240);
-	//Score = 0;
+	Score = 0;
 	CreateCar();
 	DrawBoard(0, 0, 10, 5.5, 120, 30);
 	Y.x = c; Y.y = d;
 	BigText("Person.txt", 240, Y.x, Y.y);
 	Moving = 'd';
-	//spd = 1;
+	spd = 1;
 	STT = 1;
 	//Score = 0;
 	DrawCar();

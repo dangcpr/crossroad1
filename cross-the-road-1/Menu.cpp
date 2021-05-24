@@ -212,13 +212,13 @@ void Help() //Tro giup
 {
 	Box(124, 75, 27, X_CENTER - 34, Y_CENTER - 15);
 	BigText("Help.txt", 124, X_CENTER - 15, Y_CENTER - 10);
-	SetColor(240);
+	//Text("Press 'r' to Return Menu", 124, 102, 236);
 	char press;
 	press = _getch();
-	if (press == 'r')
-	{
-		MenuControl();
-	}
+	do press = _getch();
+	while (press != 'r');
+	MenuControl();
+	SetColor(240);
 }
 
 void ReadPlayerInf(ifstream& f, player& x)
@@ -260,7 +260,7 @@ void Ranking()
 		for (int i = 0; i < plist.size(); i++)
 		{
 			fb << plist[i].name;
-			fb << setw(55);
+			fb << setw(30 - plist[i].name.size());
 			fb << plist[i].score;
 			fb << endl;
 		}

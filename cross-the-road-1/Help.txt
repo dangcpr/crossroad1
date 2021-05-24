@@ -4,13 +4,11 @@
  Press Left Arrow Key to go left. 
 Press Right Arrow Key to go right. 
 	     
-               ------
+              ------
 
-     Press 's' to save the game.
-     Press 'p' to pause the game.
-	
-               ------
-      After finishing the game:  
-Press 'r' to return to the menu screen.
-     Press 'e' to exit the game. 
+   Press 'p' to pause the game.
+
+              ------
+
+     Press 'r' to Return Menu.
 
