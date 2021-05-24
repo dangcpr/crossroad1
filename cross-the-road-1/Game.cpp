@@ -128,6 +128,7 @@ void MoveUp()
 {
 	if (Y.y - 6 > 0)
 	{
+		PlaySound(TEXT("Move.wav"), NULL, SND_FILENAME | SND_ASYNC);
 		ErasePerson();
 		Y.y -= 6;
 		BigText("Person.txt", 240, Y.x, Y.y);
@@ -184,6 +185,7 @@ void MoveDown()
 {
 	if (Y.y + 6 <= 36)
 	{
+		PlaySound(TEXT("Move.wav"), NULL, SND_FILENAME | SND_ASYNC);
 		ErasePerson();
 		Y.y += 6;
 		BigText("Person.txt", 240, Y.x, Y.y);
@@ -242,7 +244,7 @@ bool PlayerAvailable(string s)
 	}
 	return 0;
 }
-void YDead(void)
+void YDead()
 {
 	string s;
 	STT = 0;
@@ -250,6 +252,13 @@ void YDead(void)
 	TerminateThread((HANDLE)t1.native_handle(), 0);
 	EraseCar();
 	ErasePerson();
+
+	system("cls");
+	PlaySound(TEXT("Gameover.wav"), NULL, SND_FILENAME | SND_ASYNC);
+	BigText("Person.txt", 252, 100, 16);
+	Ambulance();
+	PlaySound(NULL, NULL, SND_FILENAME | SND_ASYNC);
+
 	system("cls");
 	BigText("Skull.txt", 240, X_CENTER - 20, 1);
 	Box(124, 70, 10, X_CENTER - 40, 30);
@@ -283,6 +292,7 @@ void Finish()
 {
 	if (spd == 3) spd = 1;
 	else spd++;
+	//PlaySound(TEXT("Up.wav"), NULL, SND_FILENAME | SND_SYNC);
 	Score += 100;
 	Y.x = 50;
 	Y.y = 36;
@@ -337,33 +347,33 @@ void ControlInGame(void)
 		if (STT)
 		{
 			char press, press1;
-			press = _getch();
+			do press = _getch(); 
+			while (press != 'p' && press != KEY_LEFT && press != KEY_RIGHT && press != KEY_UP && press != KEY_DOWN);
 			if (press == 'p')
 			{
 				//SuspendThread((HANDLE)t1.native_handle());
 				STT = 0;
 				PauseGame();
-				//do {
-					press1 = _getch();
-					if (press1 == 'r') {
+				do press1 = _getch(); while (press1 != 'r' && press1 != 'e' && press1 != 'm' && press1 != 's');
+				if (press1 == 'r') {
 						
-						ClearScreen(50, 20, X_CENTER + 50, Y_CENTER - 16);
-						GoTo(0, 0);
-						//ResumeThread((HANDLE)t1.native_handle());
-						STT = 1;
-					}
-					else if (press1 == 'e') {
-						ExitGame();
-					}
-					else if (press1 == 's') {
-						TerminateThread((HANDLE)t1.native_handle(), 0);
-						SaveGame();
-					}
-					else if (press1 == 'm') {
-						system("cls");
-						TerminateThread((HANDLE)t1.native_handle(), 0);
-						MenuControl();
-					}
+					ClearScreen(50, 20, X_CENTER + 50, Y_CENTER - 16);
+					GoTo(0, 0);
+					//ResumeThread((HANDLE)t1.native_handle());
+					STT = 1;
+				}
+				else if (press1 == 'e') {
+					ExitGame();
+				}
+				else if (press1 == 's') {
+					TerminateThread((HANDLE)t1.native_handle(), 0);
+					SaveGame();
+				}
+				else if (press1 == 'm') {
+					system("cls");
+					TerminateThread((HANDLE)t1.native_handle(), 0);
+					MenuControl();
+				}
 				//}while (press1 != 'p' && press1 != 'e' && press1 != 's' && press1 != 'm');
 			}
 			else if (press == KEY_LEFT || press == KEY_RIGHT || press == KEY_DOWN || press == KEY_UP)
@@ -403,6 +413,7 @@ void PauseGame()
 	Text("    Press 's' to Save Game    ", 124, menu.x, menu.y + 1);
 	Text("    Press 'e' to Exit Game    ", 124, menu.x, menu.y + 3);
 	Text("    Press 'm' to Back To Menu ", 124, menu.x, menu.y + 2);
+	SetColor(255);
 }
 void ExitGame()
 {
@@ -498,4 +509,16 @@ void LoadGame(string s)
 	fb.close();
 	SetColor(240);
 	InGame();
+}
+void Ambulance()
+{
+	for (int i = 0; i <= 190; i++)
+	{
+		BigText("Ambulance.txt", 252, i, 15);
+		Sleep(20);
+		for (int j = 0; j <= 5; j++)
+		{
+			Text("                                 ", 255, i, 15 + j);
+		}
+	}
 }

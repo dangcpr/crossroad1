@@ -35,3 +35,5 @@ void SaveGame();
 
 //Tai file
 void LoadGame(string s);
+
+void Ambulance();

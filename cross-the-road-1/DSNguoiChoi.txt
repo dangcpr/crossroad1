@@ -24,3 +24,9 @@ vtv
 200
 bot2
 0
+bot3
+400
+bot4
+500
+Dank
+700

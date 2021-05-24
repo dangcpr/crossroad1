@@ -42,6 +42,7 @@
 #include <vector>
 #include <thread>
 #include <iomanip>
+#include <MMsystem.h>
 
 
 #define SAVED_LIST "FileDaLuu.txt" //Ten cac file game duoc save
@@ -71,3 +72,4 @@ struct you
 {
 	int x, y;
 };
+#pragma comment (lib,"winmm.lib")

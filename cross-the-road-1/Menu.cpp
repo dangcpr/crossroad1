@@ -101,6 +101,7 @@ MENU DisplayMenu()
 	menu.y = Y_CENTER + 10;
 
 	system("cls");
+	PlaySound(TEXT("Menu.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
 
 	BigText("Logo.txt", 240, 27, 3);
 	BigText("LogoCar.txt", 240, 50, 15);
@@ -206,6 +207,7 @@ void InputFileName(string& s, int x, int y)
 	Clear(s, s2, x, y);
 	Clear(s, s3, x, y + 1);
 	Text("Dung ten file! ", 124, x, y);
+	PlaySound(NULL, NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
 	LoadGame(s);
 }
 void Help() //Tro giup

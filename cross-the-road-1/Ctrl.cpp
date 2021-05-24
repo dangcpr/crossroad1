@@ -11,6 +11,7 @@ void MenuControl()
 		do { press = _getch(); } while (press != '1' && press != '2' && press != '3' && press != '4' && press != 'e');
 		if (press == '1')
 		{
+			PlaySound(NULL, NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
 			int scr = 0;
 			system("cls");
 			//Score = 0;
@@ -47,5 +48,5 @@ void MenuControl()
 			ExitGame();
 		}
 	} 
-	return;
+	//return;
 }
