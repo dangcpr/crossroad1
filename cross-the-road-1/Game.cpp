@@ -147,7 +147,7 @@ void MoveUp()
 		else
 		{
 			STT = 0;
-			char tmp=' ';
+			char press4 = ' ';
 			MENU menu;
 			menu.x = X_CENTER + 52;
 			menu.y = Y_CENTER - 11;
@@ -156,9 +156,9 @@ void MoveUp()
 			Text(" Va vao nguoi khac se bi tru 50 diem ", 124, menu.x, menu.y);
 			Text("    An 'q' de dong y    ", 124, menu.x, menu.y + 1);   
 			Text("    An 's' de tu choi    ", 124, menu.x, menu.y + 2);
-			tmp = _getch();
-			while (tmp != 'q' && tmp != 's') tmp = _getch();
-			if (tmp == 'q')
+			do press4 = _getch();
+			while (press4 != 'q' && press4 != 's');
+			if (press4 == 'q')
 			{
 				ClearScreen(40, 20, X_CENTER + 50, Y_CENTER - 16);
 				ErasePerson();
@@ -171,7 +171,7 @@ void MoveUp()
 				Score -= 50;
 				STT = 1;
 			}
-			else if(tmp=='s')
+			else if(press4 =='s')
 			{
 				ClearScreen(40, 20, X_CENTER + 50, Y_CENTER - 16);
 				GoTo(0, 0);
@@ -348,7 +348,7 @@ void ControlInGame(void)
 		{
 			char press, press1;
 			do press = _getch(); 
-			while (press != 'p' && press != KEY_LEFT && press != KEY_RIGHT && press != KEY_UP && press != KEY_DOWN);
+			while (press != 'p' && press != 'q' && press != 'r' && press != KEY_LEFT && press != KEY_RIGHT && press != KEY_UP && press != KEY_DOWN);
 			if (press == 'p')
 			{
 				//SuspendThread((HANDLE)t1.native_handle());
