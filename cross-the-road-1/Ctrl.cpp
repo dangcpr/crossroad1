@@ -8,7 +8,7 @@ void MenuControl()
 	DisplayMenu();
 	char press;
 	{
-		do { press = _getch(); } while (press != '1' && press != '2' && press != '3' && press != '4' && press != 'r' && press != 'e');
+		do { press = _getch(); } while (press != '1' && press != '2' && press != '3' && press != '4' && press != 'e');
 		if (press == '1')
 		{
 			int scr = 0;
@@ -30,9 +30,9 @@ void MenuControl()
 			Text("****** TOP 5 BEST PLAYERS ******", 117, X_CENTER - 12, Y_CENTER - 15);
 			BigText("Rank.txt", 124, X_CENTER - 15, Y_CENTER - 10);
 			Text("Press 'r' to return to the menu screen.", 124, X_CENTER - 16, Y_CENTER - 3);
-			char press;
-			do press = _getch();
-			while (press != 'r');
+			char press5;
+			press5 = _getch();
+			while (press5 != 'r') press5 = _getch();
 			SetColor(240);
 			MenuControl();
 		}

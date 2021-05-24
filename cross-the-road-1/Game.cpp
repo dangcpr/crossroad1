@@ -153,14 +153,13 @@ void MoveUp()
 			Box(124, 40,20, X_CENTER + 50, Y_CENTER - 16);
 			Text("*********** PAUSE ************", 117, menu.x, menu.y - 2);
 			Text(" Va vao nguoi khac se bi tru 50 diem ", 124, menu.x, menu.y);
-			Text("    An 'w' de dong y    ", 124, menu.x, menu.y + 1);   
+			Text("    An 'q' de dong y    ", 124, menu.x, menu.y + 1);   
 			Text("    An 's' de tu choi    ", 124, menu.x, menu.y + 2);
-			do {
-				tmp = _getch();
-			} while (tmp != 'w' && tmp != 's');
-			if (tmp == 'w')
+			tmp = _getch();
+			while (tmp != 'q' && tmp != 's') tmp = _getch();
+			if (tmp == 'q')
 			{
-				ClearScreen(45, 10, X_CENTER + 50, Y_CENTER - 16);
+				ClearScreen(40, 20, X_CENTER + 50, Y_CENTER - 16);
 				ErasePerson();
 				Y.y -= 6;
 				BigText("Person.txt", 240, Y.x, Y.y);
@@ -173,7 +172,7 @@ void MoveUp()
 			}
 			else if(tmp=='s')
 			{
-				ClearScreen(45, 10, X_CENTER + 50, Y_CENTER - 16);
+				ClearScreen(40, 20, X_CENTER + 50, Y_CENTER - 16);
 				GoTo(0, 0);
 				STT = 1;
 			}
@@ -379,13 +378,13 @@ void InGame()
 {
 	system("cls");
 	//SetColor(240);
-	Score = 0;
+	//Score = 0;
 	CreateCar();
 	DrawBoard(0, 0, 10, 5.5, 120, 30);
 	Y.x = c; Y.y = d;
 	BigText("Person.txt", 240, Y.x, Y.y);
 	Moving = 'd';
-	spd = 1;
+	//spd = 1;
 	STT = 1;
 	//Score = 0;
 	DrawCar();

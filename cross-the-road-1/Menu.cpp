@@ -213,10 +213,9 @@ void Help() //Tro giup
 	Box(124, 75, 27, X_CENTER - 34, Y_CENTER - 15);
 	BigText("Help.txt", 124, X_CENTER - 15, Y_CENTER - 10);
 	//Text("Press 'r' to Return Menu", 124, 102, 236);
-	char press;
-	press = _getch();
-	do press = _getch();
-	while (press != 'r');
+	char press2;
+	press2 = _getch();
+	while (press2 != 'r') press2 = _getch();
 	MenuControl();
 	SetColor(240);
 }
