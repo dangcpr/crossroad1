@@ -219,7 +219,6 @@ void Help() //Tro giup
 	press2 = _getch();
 	while (press2 != 'r') press2 = _getch();
 	MenuControl();
-	SetColor(240);
 }
 
 void ReadPlayerInf(ifstream& f, player& x)

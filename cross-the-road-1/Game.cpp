@@ -248,11 +248,14 @@ void YDead()
 {
 	string s;
 	STT = 0;
-	thread t1(InGame);
-	TerminateThread((HANDLE)t1.native_handle(), 0);
+	//thread t1(InGame);
+	//TerminateThread((HANDLE)t1.native_handle(), 0);
 	EraseCar();
 	ErasePerson();
-
+	for (int i = 0; i < 130; i++)
+	{
+		mark[i] = 0;
+	}
 	system("cls");
 	PlaySound(TEXT("Gameover.wav"), NULL, SND_FILENAME | SND_ASYNC);
 	BigText("Person.txt", 252, 100, 16);
@@ -324,6 +327,7 @@ void SubThread(void)
 			if (Impact())
 			{
 				YDead();
+				return;
 			}
 			if (Y.y < 5.5)
 			{
@@ -417,10 +421,9 @@ void PauseGame()
 }
 void ExitGame()
 {
-	SetColor(255);
 	system("cls");
-	BigText("ThankYou.txt", 71, 45, 15);
 	SetColor(255);
+	BigText("ThankYou.txt", 71, 45, 15);
 }
 void DrawBoard(int row, int col, int x, int y, int width, int height)
 {
@@ -495,7 +498,7 @@ void SaveGame()
 		{
 			f1 << a.x[i][j] << " ";
 		}
-		f1 << timeStart[i] << endl;
+		f1 << timeStart[i] << " " << a.State[i] << endl;
 	}
 	for (int i = 0; i < 130; i++)
 	{
@@ -531,8 +534,7 @@ void LoadGame(string s)
 		{
 			fb >> a.x[i][j];
 		}
-		fb >> timeStart[i];
-		a.State[i] = 1;
+		fb >> timeStart[i] >> a.State[i];
 		timeCur[i] = timeStart[i];
 	}
 	while (!fb.eof())

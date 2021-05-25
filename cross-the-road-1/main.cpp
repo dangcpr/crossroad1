@@ -1,6 +1,6 @@
 #include "Ctrl.h"
 
-int main(void)
+int main()
 {
     //int cnt = 0;//Biến hỗ trợ trong quá trình tăng tốc độ xe di chuyển
     //int MOVING;//Biến xác định hướng di chuyển của người
