@@ -135,14 +135,14 @@ void MoveUp()
 	}
 	else if (Y.y - 6 == 0)
 	{
-		if (mark[Y.x] == 0 && mark[Y.x + 1] == 0 && mark[Y.x + 2] == 0)
+		if (mark[Y.x] == 0)// && mark[Y.x + 1] == 0 && mark[Y.x + 2] == 0)
 		{
 			ErasePerson();
 			Y.y -= 6;
 			BigText("Person.txt", 240, Y.x, Y.y);
 			mark[Y.x] = 1;
-			mark[Y.x + 1] = 1;
-			mark[Y.x + 2] = 1;
+			//mark[Y.x + 1] = 1;
+			//mark[Y.x + 2] = 1;
 		}
 		else
 		{
@@ -166,8 +166,8 @@ void MoveUp()
 				BigText("Person.txt", 240, Y.x, Y.y);
 				GoTo(0, 0);
 				mark[Y.x] = 1;
-				mark[Y.x + 1] = 1;
-				mark[Y.x + 2] = 1;
+				//mark[Y.x + 1] = 1;
+				//mark[Y.x + 2] = 1;
 				Score -= 50;
 				STT = 1;
 			}
@@ -389,15 +389,14 @@ void InGame()
 {
 	system("cls");
 	//SetColor(240);
-	//Score = 0;
+	Score = 0;
 	CreateCar();
 	DrawBoard(0, 0, 10, 5.5, 120, 30);
 	Y.x = c; Y.y = d;
 	BigText("Person.txt", 240, Y.x, Y.y);
 	Moving = 'd';
-	//spd = 1;
+	spd = 1;
 	STT = 1;
-	//Score = 0;
 	DrawCar();
 	ControlInGame();
 }
@@ -489,6 +488,22 @@ void SaveGame()
 	f1.open(s1, ios::out);
 	f1 << Score << " " << spd; //<< " " << Y.x << " " << Y.y;
 	f1 << endl;
+	for (int i = 0; i < 5; i++)
+	{
+		f1 << a.n[i] << " ";
+		for (int j = 0; j < a.n[i]; j++)
+		{
+			f1 << a.x[i][j] << " ";
+		}
+		f1 << timeStart[i] << endl;
+	}
+	for (int i = 0; i < 130; i++)
+	{
+		if (mark[i] == 1)
+		{
+			f1 << i << " ";
+		}
+	}
 	f1.close();
 	/*ofstream f2;
 	f2.open("DSNguoiChoi.txt", ios::app);
@@ -507,9 +522,36 @@ void LoadGame(string s)
 	ifstream fb;
 	fb.open(s + ".txt");
 	fb >> Score >> spd; //>> c >> d;
-	fb.close();
 	SetColor(240);
-	InGame();
+	system("cls");
+	for (int i = 0; i < 5; i++)
+	{
+		fb >> a.n[i];
+		for (int j = 0; j < a.n[i]; j++)
+		{
+			fb >> a.x[i][j];
+		}
+		fb >> timeStart[i];
+		a.State[i] = 1;
+		timeCur[i] = timeStart[i];
+	}
+	while (!fb.eof())
+	{
+		int i;
+		fb >> i;
+		{
+			BigText("Person.txt", 240, i, 0);
+		}
+		mark[i] = 1;
+	}
+	fb.close();
+	DrawBoard(0, 0, 10, 5.5, 120, 30);
+	Y.x = c; Y.y = d;
+	BigText("Person.txt", 240, Y.x, Y.y);
+	Moving = 'd';
+	STT = 1;
+	DrawCar();
+	ControlInGame();
 }
 void Ambulance()
 {
