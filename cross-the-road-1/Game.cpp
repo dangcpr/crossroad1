@@ -282,8 +282,9 @@ void YDead()
 	f.close();
 	Text("Saved successfully.", 112, X_CENTER - 35, 32 + t);
 	t++;
-	Text("Press any key to return to main menu.", 112, X_CENTER - 35, 32 + t);
-	_getch();
+	Text("Press 'r' to return to main menu.", 112, X_CENTER - 35, 32 + t);
+	char press6;
+	do press6 = _getch(); while (press6 != 'r');
 	Score = 0; spd = 1;
 	MenuControl();
 }
@@ -331,7 +332,7 @@ void SubThread(void)
 			MENU menu;
 			menu.x = X_CENTER + 52;
 			menu.y = Y_CENTER - 11;
-			Text("Score :", 240, menu.x, menu.y);
+			Text("Score: ", 240, menu.x, menu.y);
 			cout << Score;
 			SetColor(240);
 			Sleep(100);
