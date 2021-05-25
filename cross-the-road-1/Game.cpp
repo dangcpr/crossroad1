@@ -268,7 +268,7 @@ void YDead()
 	Text("Game Over. Please type your name to save your infomation: ", 112, X_CENTER - 35 , 31);
 	int t = 0;
 	do {
-		std::fflush(stdin);
+		//std::fflush(stdin);
 		getline(std::cin, s);
 		if (PlayerAvailable(s)) { 
 			Text("This name is available. Please type again. ", 112, X_CENTER - 35 , 32 + t);
@@ -353,7 +353,7 @@ void ControlInGame(void)
 		{
 			char press, press1;
 			do press = _getch(); 
-			while (press != 'p' && press != 'q' && press != 'r' && press != KEY_LEFT && press != KEY_RIGHT && press != KEY_UP && press != KEY_DOWN);
+			while (press != 'p' && press != 'q' && press != 'r' && press != 'e' && press != 'm' && press != 's' && press != KEY_LEFT && press != KEY_RIGHT && press != KEY_UP && press != KEY_DOWN);
 			if (press == 'p')
 			{
 				//SuspendThread((HANDLE)t1.native_handle());
@@ -502,10 +502,7 @@ void SaveGame()
 	}
 	for (int i = 0; i < 130; i++)
 	{
-		if (mark[i] == 1)
-		{
-			f1 << i << " ";
-		}
+		f1 << mark[i] << " ";
 	}
 	f1.close();
 	/*ofstream f2;
@@ -539,14 +536,17 @@ void LoadGame(string s)
 	}
 	while (!fb.eof())
 	{
-		int i;
-		fb >> i;
+		for (int i = 0; i < 130; i++)
 		{
-			BigText("Person.txt", 240, i, 0);
+			fb >> mark[i];
 		}
-		mark[i] = 1;
 	}
 	fb.close();
+	for (int i = 0; i < 130; i++)
+	{
+		if (mark[i] == 1)
+			BigText("Person.txt", 240, i, 0);
+	}
 	DrawBoard(0, 0, 10, 5.5, 120, 30);
 	Y.x = c; Y.y = d;
 	BigText("Person.txt", 240, Y.x, Y.y);
