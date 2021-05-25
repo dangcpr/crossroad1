@@ -267,15 +267,9 @@ void YDead()
 	Box(124, 70, 10, X_CENTER - 40, 30);
 	Text("Game Over. Please type your name to save your infomation: ", 112, X_CENTER - 35 , 31);
 	int t = 0;
-	do {
-		//std::fflush(stdin);
-		getline(std::cin, s);
-		if (PlayerAvailable(s)) { 
-			Text("This name is available. Please type again. ", 112, X_CENTER - 35 , 32 + t);
-			t++;
-			//GoTo(X_CENTER - 55, 19 + t);
-		};
-	} while (PlayerAvailable(s));
+	cin.ignore();
+	getline(std::cin, s);
+	t++;
 	ofstream f;
 	f.open("DSNguoiChoi.txt", ios::app);
 	f << s;
@@ -489,7 +483,7 @@ void SaveGame()
 	f.close();
 	ofstream f1;
 	f1.open(s1, ios::out);
-	f1 << Score << " " << spd; //<< " " << Y.x << " " << Y.y;
+	f1 << Score << " " << spd << " " << Y.x << " " << Y.y;
 	f1 << endl;
 	for (int i = 0; i < 5; i++)
 	{
@@ -521,7 +515,7 @@ void LoadGame(string s)
 {
 	ifstream fb;
 	fb.open(s + ".txt");
-	fb >> Score >> spd; //>> c >> d;
+	fb >> Score >> spd >> c >> d;
 	SetColor(240);
 	system("cls");
 	for (int i = 0; i < 5; i++)
