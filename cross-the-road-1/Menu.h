@@ -28,4 +28,5 @@ void InputFileName(string& s, int x, int y);//Nhap ten file
 void Help();
 void ReadPlayerInf(ifstream& f, player& x);//Doc thong tin nguoi choi
 void Ranking();//Xep hang 
- 
+
+void Clear(string& s, string t, int x, int y);

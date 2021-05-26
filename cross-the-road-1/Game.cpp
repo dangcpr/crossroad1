@@ -1,6 +1,4 @@
-#include "Game.h"
-#include "Data.h"
-#include "Menu.h"
+﻿#include "Game.h"
 
 int timeStart[5], timeCur[5];
 you Y;
@@ -266,9 +264,8 @@ void YDead()
 	BigText("Skull.txt", 240, X_CENTER - 20, 1);
 	Box(124, 70, 10, X_CENTER - 40, 30);
 	Text("Game Over. Please type your name to save your infomation: ", 112, X_CENTER - 35 , 31);
-	int t = 0;
-	getline(std::cin, s);
-	t++;
+	//int t = 0;
+	getline(cin, s);
 	//GoTo(X_CENTER - 55, 19 + t);
 	ofstream f;
 	f.open("DSNguoiChoi.txt", ios::app);
@@ -277,9 +274,9 @@ void YDead()
 	f << Score;
 	f << endl;
 	f.close();
-	Text("Saved successfully.", 112, X_CENTER - 35, 32 + t);
-	t++;
-	Text("Press 'r' to return to main menu.", 112, X_CENTER - 35, 32 + t);
+	Text("Saved successfully.", 112, X_CENTER - 35, 31 + 1);
+	//t++;
+	Text("Press 'r' to return to main menu.", 112, X_CENTER - 35, 31 + 2);
 	char press6;
 	do press6 = _getch(); while (press6 != 'r');
 	Score = 0; spd = 1;
@@ -462,18 +459,18 @@ void SaveGame()
 	//Box(124, 10, 10, 56, 16); 
 	Box(124, 50, 20, X_CENTER + 50, Y_CENTER - 16); //+50 ,-16
 	Text("***** SAVE GAME ******", 117, menu.x, menu.y - 2);
+	Text("Press ESC to Resume", 112, menu.x, menu.y + 2);
 	Text("Enter your name: ", 124, menu.x, menu.y);
-	int t = 0;
 	do {
-	t = t + 2;
-	fflush(stdin);
-	getline(cin, s);
-	if (FileAvailable(s))
-	{
-		Text("This name is availble. Please type again.", 124, menu.x, menu.y + t);
-		t = t + 2;
-		GoTo(menu.x, menu.y + t);
-	}
+		s = InputName(1);
+		if (FileAvailable(s))
+		{
+			Text("This name is availble. Please type again.", 124, menu.x, menu.y + 1);
+			Clear(s, "", menu.x + 17, menu.y);
+			s.clear();
+			GoTo(menu.x + 17, menu.y);
+			//s = InputName(1);
+		}
 	} while (FileAvailable(s));
 	string s1 = s + ".txt";
 	ofstream f;
@@ -509,8 +506,8 @@ void SaveGame()
 	f2 << Score;
 	f2 << endl;
 	f2.close();*/
-	Text("Saved successfully.", 124, menu.x, menu.y + t); t += 2;
-	Text("Press any key to return to main menu.",124, menu.x, menu.y + t);
+	Text("Saved successfully.", 124, menu.x, menu.y + 3);
+	Text("Press any key to return to main menu.",124, menu.x, menu.y + 5);
 	_getch();
 	MenuControl();
 }
@@ -560,4 +557,39 @@ void Ambulance()
 			Text("                                 ", 255, i, 15 + j);
 		}
 	}
+}
+
+string InputName(int n)
+{
+	string pw;
+	for (char c; (c = _getch()); )
+	{
+		if (c == '\n' || c == '\r') { //phím enter
+			cout << "\n";
+			break;
+		}
+		else if (c == '\b' && pw.size() > 0) { //phím backspace
+			cout << "\b \b";
+			if (!pw.empty()) pw.erase(pw.size() - 1);
+		}
+		else if (c == -32) { //phím mũi tên
+			_getch(); //bỏ qua kí tự tiếp theo (hướng mũi tên)
+		}
+		else if (isprint(c)) { //isprint tức là chỉ nhận những ký tự in ra được (có tính khoảng trắng)
+			cout << c;
+			pw += c;
+		}
+		else if (c == 27 && !isprint(c) && n == 0)
+			MenuControl();
+		else if (c == 27 && !isprint(c) && n == 1)
+		{
+			ClearScreen(50, 20, X_CENTER + 50, Y_CENTER - 16);
+			GoTo(0, 0);
+			//ResumeThread((HANDLE)t1.native_handle());
+			STT = 1;
+			ControlInGame();
+		}
+		
+	}
+	return pw;
 }

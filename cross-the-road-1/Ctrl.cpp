@@ -1,6 +1,4 @@
-#include "Menu.h"
-#include "Data.h"
-#include "Game.h"
+#include "Ctrl.h"
 
 void MenuControl()
 {

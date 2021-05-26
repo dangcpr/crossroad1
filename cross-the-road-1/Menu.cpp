@@ -1,5 +1,5 @@
 #include"Menu.h"
-#include "Ctrl.h"
+
 //OK
 void CreateConsoleWindow(int pWidth, int pHeight)
 {
@@ -143,7 +143,7 @@ void ShowFile()
 	BigText("LogoCar.txt", 240, 43, 15);
 	Box(124, 53, 13, X_CENTER - 35, Y_CENTER + 5);
 	Text("*********** FILES ************", 117, menu.x, menu.y - 3);
-	Text("Press Space->Enter to Return", 112, menu.x, menu.y + 6);
+	Text("Press ESC to Return Menu", 112, menu.x, menu.y + 6);
 	if (File.size() >= 1)
 		Text(File[File.size() - 1], 124, menu.x, menu.y - 1);
 	if (File.size() >= 2)
@@ -185,24 +185,15 @@ void InputFileName(string& s, int x, int y)
 	string s1 = "Nhap ten file: ", s2 = "Sai ten file!", s3 = "Nhap lai ten: ";
 	vector<string> File = FileSaved("FileDaLuu.txt");
 	Text(s1, 124, x, y);
-	fflush(stdin);
-	getline(cin, s);
+	s = InputName(0);
 	while (FileAvailable(s) == 0)
 	{
-		if (s == " ")
-		{
-			system("cls");
-			SetColor(240);
-			MenuControl();
-			return;
-		}
 		Clear(s, s1, x, y);
 		Text(s2, 124, x, y);
 		Clear(s, s3, x, y + 1);
 		Text(s3, 124, x, y + 1);
-		fflush(stdin);
-		getline(cin, s);
-
+		s.clear();
+		s = InputName(0);
 	}
 	Clear(s, s2, x, y);
 	Clear(s, s3, x, y + 1);

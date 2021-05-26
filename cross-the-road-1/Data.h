@@ -73,3 +73,4 @@ struct you
 	int x, y;
 };
 #pragma comment (lib,"winmm.lib")
+string InputName(int n);
