@@ -217,7 +217,7 @@ bool Impact()
 	while (5.5 + (i * 6) > Y.y) i--;
 	for (int j = 0; j < a.n[i]; j++)
 	{
-		if (a.x[i][j] <= Y.x && a.x[i][j] + 20 >= Y.x && Y.y >= (5.5 + i * 6) && Y.y < (5.5 + (i + 1) * 6))
+		if (a.x[i][j] <= Y.x + 2 && a.x[i][j] + 20 >= Y.x && Y.y >= (5.5 + i * 6) && Y.y < (5.5 + (i + 1) * 6))
 		{
 			return true; // kiem tra nguoi co nam trong doan duong i hay khong va co o vi tri da co xe san hay khong 
 		}
