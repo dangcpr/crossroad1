@@ -16,7 +16,7 @@ void CreateCar()
 	for (int i = 0; i < 5; i++)
 	{
 		a.n[i] = (rand() % 3) + 1;
-		a.x[i][0] = (i % 2 == 0) ? 11 : 109;
+		a.x[i][0] = (i % 2 == 0) ? 12 : 110;
 		for (int j = 1; j < a.n[i]; j++)
 		{
 			int temp = (i % 2 == 0) ? 35 : -35;
@@ -100,8 +100,8 @@ void MoveCar()
 			{
 				for (int j = 0; j < a.n[i]; j++)
 				{
-					if (a.x[i][j] + 1 > 109)
-						a.x[i][j] = 11;
+					if (a.x[i][j] + 1 > 110)
+						a.x[i][j] = 12;
 					else a.x[i][j]++;
 				}
 			}
@@ -117,8 +117,8 @@ void MoveCar()
 			{	
 				for (int j = 0; j < a.n[i]; j++)
 				{
-					if (a.x[i][j] - 1 < 11)
-						a.x[i][j] = 109;
+					if (a.x[i][j] - 1 < 12)
+						a.x[i][j] = 110;
 					else a.x[i][j]--;
 				}
 			}
@@ -314,8 +314,8 @@ void SubThread(void)
 				MoveUp(); break;
 			}
 			Moving = ' ';
-			EraseCar();
 			StopCar();
+			EraseCar();
 			MoveCar();
 			DrawCar();
 			if (Impact())
@@ -333,7 +333,7 @@ void SubThread(void)
 			Text("Score: ", 240, menu.x, menu.y);
 			cout << Score;
 			SetColor(240);
-			Sleep(100);
+			Sleep(150);
 		}
 	}
 	
@@ -421,26 +421,30 @@ void ExitGame()
 }
 void DrawBoard(int row, int col, int x, int y, int width, int height)
 {
+	SetColor(240);
 	for (int i = 0; i < height; i++)
 	{
 		//Sleep(0.8);
-		GoTo(x, y + i);
-		cout << "|";
+		//GoTo(x, y + i);
+		//cout << "|";
+		Text("|", 240, x, y + i);
 	}
 	for (int i = 0; i <= height; i += 6)
 	{
 		for (int j = 0; j <= width; j++)
 		{
 			//Sleep(0.8);
-			GoTo(x + j + 1, y + i - 1);
-			cout << "_";
+			//GoTo(x + j + 1, y + i - 1);
+			//cout << "_";
+			Text("_", 240, x + j + 1, y + i - 1);
 		}
 	}
 	for (int i = 0; i < height; i++)
 	{
 		//Sleep(0.8);
-		GoTo(x + width + 2, y + i);
-		cout << "|";
+		//GoTo(x + width + 2, y + i);
+		//cout << "|";
+		Text("|", 240, x + width + 2, y + i);
 	}
 	GoTo(0, 0);
 }
