@@ -73,3 +73,5 @@ kuro
 100
 haha
 200
+haha
+100

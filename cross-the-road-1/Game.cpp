@@ -366,8 +366,8 @@ void ControlInGame(void)
 					SaveGame();
 				}
 				else if (press1 == 'm') {
-					system("cls");
 					TerminateThread((HANDLE)t1.native_handle(), 0);
+					system("cls");
 					MenuControl();
 				}
 				//}while (press1 != 'p' && press1 != 'e' && press1 != 's' && press1 != 'm');
@@ -561,23 +561,24 @@ void Ambulance()
 
 string InputName(int n)
 {
-	string pw;
+	string Name;
 	for (char c; (c = _getch()); )
 	{
-		if (c == '\n' || c == '\r') { //phím enter
+		if (c == '\n' || c == '\r') { //Enter
 			cout << "\n";
 			break;
 		}
-		else if (c == '\b' && pw.size() > 0) { //phím backspace
+		else if (c == '\b' && Name.size() > 0) { //backspace
 			cout << "\b \b";
-			if (!pw.empty()) pw.erase(pw.size() - 1);
+			if (!Name.empty())
+				Name.erase(Name.size() - 1);
 		}
-		else if (c == -32) { //phím mũi tên
-			_getch(); //bỏ qua kí tự tiếp theo (hướng mũi tên)
+		else if (c == -32) { //Up,Down,Right,Left
+			_getch();
 		}
-		else if (isprint(c)) { //isprint tức là chỉ nhận những ký tự in ra được (có tính khoảng trắng)
+		else if (isprint(c)) {
 			cout << c;
-			pw += c;
+			Name += c;
 		}
 		else if (c == 27 && !isprint(c) && n == 0)
 			MenuControl();
@@ -589,7 +590,6 @@ string InputName(int n)
 			STT = 1;
 			ControlInGame();
 		}
-		
 	}
-	return pw;
+	return Name;
 }
