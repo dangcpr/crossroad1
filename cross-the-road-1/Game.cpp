@@ -1,4 +1,4 @@
-﻿#include "Game.h"
+#include "Game.h"
 
 int timeStart[5], timeCur[5];
 you Y;
@@ -38,9 +38,10 @@ void StopCar()
 			timeCur[i] = timeStart[i];
 			a.State[i] = !a.State[i];
 		}
-		GoTo(5, 5.5 + (i * 6));
-		cout << "  ";
-		GoTo(5, 5.5 + (i * 6));
+		GoTo(4, 5.5 + (i * 6));
+		cout << "   ";
+		SetColor(240);
+		GoTo(4, 5.5 + (i * 6));
 		cout << timeCur[i];
 	}
 	
@@ -79,7 +80,9 @@ void EraseCar()
 			for (int k = 0; k < 5; k++)
 			{
 				GoTo(a.x[i][j], 5.5 + (i * 6) + k);
-					cout << "                     ";
+				SetColor(255);
+				cout << "                      ";
+				//Text("Empty.txt", 255, a.x[i][j], 5.5 + (i * 6) + k);
 			}
 		}
 	}
