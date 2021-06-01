@@ -155,7 +155,7 @@ void ShowFile()
 	//{
 		//Text(File[File.size() + i], 124, menu.x, menu.y - i - 1);
 	//}
-	InputFileName(s, menu.x, menu.y + 3);
+	InputFileName(s, menu.x, menu.y + 3, 0);
 	SetColor(240);
 	//LoadGame(s);
 }
@@ -179,13 +179,13 @@ void Clear(string& s, string t, int x, int y)
 		Text(" ", 124, x + i, y);
 	}
 }
-void InputFileName(string& s, int x, int y)
+void InputFileName(string& s, int x, int y, int n)
 {
 	MENU menu;
 	string s1 = "Nhap ten file: ", s2 = "Sai ten file!", s3 = "Nhap lai ten: ";
 	vector<string> File = FileSaved("FileDaLuu.txt");
 	Text(s1, 124, x, y);
-	s = InputName(0);
+	s = InputName(n);
 	while (FileAvailable(s) == 0)
 	{
 		Clear(s, s1, x, y);
@@ -193,7 +193,7 @@ void InputFileName(string& s, int x, int y)
 		Clear(s, s3, x, y + 1);
 		Text(s3, 124, x, y + 1);
 		s.clear();
-		s = InputName(0);
+		s = InputName(n);
 	}
 	Clear(s, s2, x, y);
 	Clear(s, s3, x, y + 1);

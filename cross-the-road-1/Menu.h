@@ -24,7 +24,7 @@ MENU DisplayMenu();
 vector<string> FileSaved(string filename);//Luu ten tung file vao tung phan tu cua vector
 void ShowFile();//Man hinh hien ten file
 bool FileAvailable(string s);//Kiem tra file co ton tai khong
-void InputFileName(string& s, int x, int y);//Nhap ten file
+void InputFileName(string& s, int x, int y, int n);//Nhap ten file
 void Help();
 void ReadPlayerInf(ifstream& f, player& x);//Doc thong tin nguoi choi
 void Ranking();//Xep hang 

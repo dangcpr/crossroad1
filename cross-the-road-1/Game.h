@@ -38,3 +38,5 @@ void SaveGame();
 void LoadGame(string s);
 
 void Ambulance();
+
+string InputName(int n);

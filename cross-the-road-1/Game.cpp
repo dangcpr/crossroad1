@@ -218,7 +218,7 @@ bool Impact()
 	while (5.5 + (i * 6) > Y.y) i--;
 	for (int j = 0; j < a.n[i]; j++)
 	{
-		if (a.x[i][j] <= Y.x + 2 && a.x[i][j] + 20 >= Y.x && Y.y >= (5.5 + i * 6) && Y.y < (5.5 + (i + 1) * 6))
+		if (a.x[i][j] <= Y.x + 3 && a.x[i][j] + 20 >= Y.x && Y.y >= (5.5 + i * 6) && Y.y < (5.5 + (i + 1) * 6))
 		{
 			return true; // kiem tra nguoi co nam trong doan duong i hay khong va co o vi tri da co xe san hay khong 
 		}
@@ -340,25 +340,25 @@ void SubThread(void)
 }
 void ControlInGame(void)
 {
+	string s;
 	thread t1(SubThread);
 	while (1)
 	{
 		if (STT)
 		{
 			char press, press1;
-			do press = _getch(); 
-			while (press != 'p' && press != 'q' && press != 'r' && press != KEY_LEFT && press != KEY_RIGHT && press != KEY_UP && press != KEY_DOWN);
+			press = _getch();
+			//while (press != 'p' && press != 'q' && press != 'r' && press != KEY_LEFT && press != KEY_RIGHT && press != KEY_UP && press != KEY_DOWN);
 			if (press == 'p')
 			{
-				//SuspendThread((HANDLE)t1.native_handle());
+				SuspendThread((HANDLE)t1.native_handle());
 				STT = 0;
 				PauseGame();
-				do press1 = _getch(); while (press1 != 'r' && press1 != 'e' && press1 != 'm' && press1 != 's');
+				do press1 = _getch(); while (press1 != 'r' && press1 != 'e' && press1 != 'm' && press1 != 's' && press1 != 'l');
 				if (press1 == 'r') {
-						
 					ClearScreen(50, 20, X_CENTER + 50, Y_CENTER - 16);
 					GoTo(0, 0);
-					//ResumeThread((HANDLE)t1.native_handle());
+					ResumeThread((HANDLE)t1.native_handle());
 					STT = 1;
 				}
 				else if (press1 == 'e') {
@@ -372,6 +372,14 @@ void ControlInGame(void)
 					TerminateThread((HANDLE)t1.native_handle(), 0);
 					system("cls");
 					MenuControl();
+				}
+				else if (press1 == 'l')
+				{
+					STT = 0;
+					ClearScreen(50, 20, X_CENTER + 50, Y_CENTER - 16);
+					Box(124, 50, 20, X_CENTER + 50, Y_CENTER - 16);
+					Text("*********** LOAD ************", 117, X_CENTER + 60, Y_CENTER - 13);
+					InputFileName(s, X_CENTER + 55, Y_CENTER - 10, 1);
 				}
 				//}while (press1 != 'p' && press1 != 'e' && press1 != 's' && press1 != 'm');
 			}
@@ -411,6 +419,7 @@ void PauseGame()
 	Text("    Press 's' to Save Game    ", 124, menu.x, menu.y + 1);
 	Text("    Press 'e' to Exit Game    ", 124, menu.x, menu.y + 3);
 	Text("    Press 'm' to Back To Menu ", 124, menu.x, menu.y + 2);
+	Text("    Press 'l' to Load Game ", 124, menu.x, menu.y + 4);
 	SetColor(255);
 }
 void ExitGame()
