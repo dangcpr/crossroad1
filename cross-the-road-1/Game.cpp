@@ -380,6 +380,7 @@ void ControlInGame(void)
 					Box(124, 50, 20, X_CENTER + 50, Y_CENTER - 16);
 					Text("*********** LOAD ************", 117, X_CENTER + 60, Y_CENTER - 13);
 					InputFileName(s, X_CENTER + 55, Y_CENTER - 10, 1);
+					TerminateThread((HANDLE)t1.native_handle(), 0);
 				}
 				//}while (press1 != 'p' && press1 != 'e' && press1 != 's' && press1 != 'm');
 			}
@@ -469,27 +470,39 @@ void ClearScreen(int width, int height, int x, int y)
 void SaveGame()
 {
 	string s;
+	string s4 = "Press ESC to Resume";
+	string s3 = "This name is availble. Overwrite?";
+	string s2 = " (Yes: Press '1', No: Press '0') ";
 	MENU menu;
 	menu.x = X_CENTER + 59;    //X_CENTER + 52
 	menu.y = Y_CENTER - 11;     /*Y_CENTER - 11;*/
 	//Box(124, 10, 10, 56, 16); 
 	Box(124, 50, 20, X_CENTER + 50, Y_CENTER - 16); //+50 ,-16
 	Text("***** SAVE GAME ******", 117, menu.x, menu.y - 2);
-	Text("Press ESC to Resume", 112, menu.x, menu.y + 2);
+	Text(s4, 112, menu.x, menu.y + 2);
 	Text("Enter your name: ", 124, menu.x, menu.y);
 	do {
 		s = InputName(1);
 		if (FileAvailable(s))
 		{
-			Text("This name is availble. Please type again.", 124, menu.x, menu.y + 1);
-			Clear(s, "", menu.x + 17, menu.y);
-			s.clear();
-			GoTo(menu.x + 17, menu.y);
-			//s = InputName(1);
+			Text(s3, 124, menu.x, menu.y + 5);
+			Text(s2, 124, menu.x, menu.y + 6);
+			char press7;
+			do  press7 = _getch(); while (press7 != '1' && press7 != '0');
+			if (press7 == '1') break;
+			else 
+			{
+				Clear(s3, "", menu.x, menu.y + 5);
+				Clear(s2, "", menu.x, menu.y + 6);
+				Clear(s, "", menu.x + 17, menu.y);
+				s.clear();
+				GoTo(menu.x + 17, menu.y);
+				//s = InputName(1); 
+			}			
 		}
 	} while (FileAvailable(s));
 	string s1 = s + ".txt";
-	ofstream f;
+	fstream f;
 	f.open("FileDaLuu.txt", ios::app);
 	f << s;
 	f << endl;
@@ -522,13 +535,20 @@ void SaveGame()
 	f2 << Score;
 	f2 << endl;
 	f2.close();*/
-	Text("Saved successfully.", 124, menu.x, menu.y + 3);
-	Text("Press any key to return to main menu.",124, menu.x, menu.y + 5);
+	Clear(s4, "", menu.x, menu.y + 2);
+	Text("Saved successfully.", 124, menu.x, menu.y + 4);
+	Clear(s3, "", menu.x, menu.y + 5);
+	Text("Press any key to return to main menu.",124, menu.x, menu.y + 6);
 	_getch();
 	MenuControl();
 }
 void LoadGame(string s)
 {
+	//system("cls");
+	for (int i = 0; i < 130; i++)
+	{
+		mark[i] = 0;
+	}
 	ifstream fb;
 	fb.open(s + ".txt");
 	fb >> Score >> spd >> c >> d;

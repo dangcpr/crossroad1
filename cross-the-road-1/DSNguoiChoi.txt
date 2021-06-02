@@ -75,3 +75,5 @@ haha
 200
 haha
 100
+gamo
+500
