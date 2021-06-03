@@ -92,6 +92,13 @@ void BigText(string filename, int color, int x, int y) //In du lieu tep tin
 		Text(subline[i], color, x, y++);
 	f.close();
 }
+void Clear(string& s, string t, int x, int y)
+{
+	for (int i = 0; i < s.size() + t.size() + 2; i++)
+	{
+		Text(" ", 124, x + i, y);
+	}
+}
 //Man hinh menu
 MENU DisplayMenu()
 {
@@ -172,13 +179,7 @@ bool FileAvailable(string s)
 	}
 	return 0;
 }
-void Clear(string& s, string t, int x, int y)
-{
-	for (int i = 0; i < s.size() + t.size() + 2; i++)
-	{
-		Text(" ", 124, x + i, y);
-	}
-}
+
 void InputFileName(string& s, int x, int y, int n)
 {
 	MENU menu;
