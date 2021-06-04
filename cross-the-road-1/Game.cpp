@@ -500,13 +500,16 @@ void SaveGame()
 				//s = InputName(1); 
 			}			
 		}
+		else
+		{
+			fstream f;
+			f.open("FileDaLuu.txt", ios::app);
+			f << s;
+			f << endl;
+			f.close();
+		}
 	} while (FileAvailable(s));
 	string s1 = s + ".txt";
-	fstream f;
-	f.open("FileDaLuu.txt", ios::app);
-	f << s;
-	f << endl;
-	f.close();
 	ofstream f1;
 	f1.open(s1, ios::out);
 	f1 << Score << " " << spd << " " << Y.x << " " << Y.y;

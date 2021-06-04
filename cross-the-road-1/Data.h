@@ -1,38 +1,16 @@
 ﻿#pragma once
-#define MAX_CAR 17
-#define MAX_CAR_LENGTH 40
-#define MAX_SPEED 3
-//Biến toàn cục
- // Đại diện người qua đường
+// Kính thước màn hình console
 #define WIDTH 1600 //1320
 #define HEIGHT 700
 #define X_CENTER WIDTH / 16 + 2
 #define Y_CENTER HEIGHT / 32
-//Chess Board
-#define BOARD_SIZE 13
-#define LEFT 2
-#define TOP 1
-#define HORIZONTAL_DISTANCE 4
-#define VERTICAL_DISTANCE 2
 //ASCII
-#define SPACE 32
-#define ENTER 13
 #define ESC 27
 #define KEY_UP 72
 #define KEY_DOWN 80
 #define KEY_LEFT 75
 #define KEY_RIGHT 77
-#define TOP_LEFT (char)218
-#define TOP_RIGHT (char)191
-#define BOTTOM_LEFT (char)192
-#define BOTTOM_RIGHT (char)217
-#define TOP_CROSS (char)194
-#define BOTTOM_CROSS (char)193
-#define	LEFT_CROSS (char)195
-#define RIGHT_CROSS (char)180
-#define CROSS (char)197
-#define HORIZONTAL_LINE (char)196
-#define VERTICAL_LINE (char)179
+
 #include <iostream>
 #include <Windows.h>
 #include <stdlib.h>

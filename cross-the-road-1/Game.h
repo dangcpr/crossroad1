@@ -3,9 +3,6 @@
 #include "Ctrl.h"
 #include "Menu.h"
 
-
-
-
 void CreateCar();
 void StopCar();
 void DrawCar();
