@@ -104,7 +104,7 @@ MENU DisplayMenu()
 {
 	MENU menu;
 	menu.choices = 3;
-	menu.x = X_CENTER - 23;
+	menu.x = X_CENTER - 15;
 	menu.y = Y_CENTER + 10;
 
 	system("cls");
@@ -112,7 +112,7 @@ MENU DisplayMenu()
 
 	BigText("Logo.txt", 240, 27, 3);
 	BigText("LogoCar.txt", 240, 50, 15);
-	Box(124, 53, 13, X_CENTER - 35, Y_CENTER + 5);
+	Box(124, 53, 13, X_CENTER - 27, Y_CENTER + 5);
 	Text("*********** MENU ************", 117, menu.x, menu.y - 2);
 	Text("   Press '1' to Start Game   ", 124, menu.x, menu.y);
 	Text("   Press '2' to Load Game    ", 124, menu.x, menu.y + 1);
@@ -141,14 +141,14 @@ void ShowFile()
 	vector<string> File = FileSaved("FileDaLuu.txt");
 	File.resize(File.size() - 1);
 	string s;
-	menu.x = X_CENTER - 23;
+	menu.x = X_CENTER - 15;
 	menu.y = Y_CENTER + 10;
 
 	system("cls");
 
 	BigText("Logo.txt", 240, 27, 3);
 	BigText("LogoCar.txt", 240, 50, 15);
-	Box(124, 53, 13, X_CENTER - 35, Y_CENTER + 5);
+	Box(124, 53, 13, X_CENTER - 27, Y_CENTER + 5);
 	Text("*********** FILES ************", 117, menu.x, menu.y - 3);
 	Text("Press ESC to Return Menu", 112, menu.x, menu.y + 6);
 	if (File.size() >= 1)

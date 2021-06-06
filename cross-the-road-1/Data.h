@@ -1,6 +1,6 @@
 ﻿#pragma once
 // Kính thước màn hình console
-#define WIDTH 1600 //1320
+#define WIDTH 1470 //1320
 #define HEIGHT 700
 #define X_CENTER WIDTH / 16 + 2
 #define Y_CENTER HEIGHT / 32
