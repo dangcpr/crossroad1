@@ -225,13 +225,6 @@ bool Impact()
 	}
 	return false;
 }
-void GameOver(void)
-{
-	for (int i = 0; i <= 50; i++)
-	{
-		BigText("Car.txt", 240, i + 11, 30);
-	}
-}
 bool PlayerAvailable(string s)
 {
 	vector<string> File = FileSaved("DSNguoiChoi.txt");
@@ -379,6 +372,7 @@ void ControlInGame(void)
 					ClearScreen(50, 20, X_CENTER + 50, Y_CENTER - 16);
 					Box(124, 50, 20, X_CENTER + 50, Y_CENTER - 16);
 					Text("*********** LOAD ************", 117, X_CENTER + 60, Y_CENTER - 13);
+					Text("Press ESC to Resume", 112, X_CENTER + 60, Y_CENTER - 8);
 					InputFileName(s, X_CENTER + 55, Y_CENTER - 10, 1);
 					TerminateThread((HANDLE)t1.native_handle(), 0);
 				}
@@ -397,6 +391,10 @@ void InGame()
 	system("cls");
 	//SetColor(240);
 	Score = 0;
+	for (int i = 0; i < 130; i++)
+	{
+		mark[i] = 0;
+	}
 	CreateCar();
 	DrawBoard(0, 0, 10, 5.5, 120, 30);
 	Y.x = c; Y.y = d;
@@ -507,6 +505,7 @@ void SaveGame()
 			f << s;
 			f << endl;
 			f.close();
+			break;
 		}
 	} while (FileAvailable(s));
 	string s1 = s + ".txt";
@@ -531,13 +530,6 @@ void SaveGame()
 		}
 	}
 	f1.close();
-	/*ofstream f2;
-	f2.open("DSNguoiChoi.txt", ios::app);
-	f2 << s;
-	f2 << endl;
-	f2 << Score;
-	f2 << endl;
-	f2.close();*/
 	Clear(s4, "", menu.x, menu.y + 2);
 	Text("Saved successfully.", 124, menu.x, menu.y + 4);
 	Clear(s3, "", menu.x, menu.y + 5);
@@ -547,7 +539,6 @@ void SaveGame()
 }
 void LoadGame(string s)
 {
-	//system("cls");
 	for (int i = 0; i < 130; i++)
 	{
 		mark[i] = 0;

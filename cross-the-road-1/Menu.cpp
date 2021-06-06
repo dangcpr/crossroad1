@@ -146,8 +146,8 @@ void ShowFile()
 
 	system("cls");
 
-	BigText("Logo.txt", 240, 20, 3);
-	BigText("LogoCar.txt", 240, 43, 15);
+	BigText("Logo.txt", 240, 27, 3);
+	BigText("LogoCar.txt", 240, 50, 15);
 	Box(124, 53, 13, X_CENTER - 35, Y_CENTER + 5);
 	Text("*********** FILES ************", 117, menu.x, menu.y - 3);
 	Text("Press ESC to Return Menu", 112, menu.x, menu.y + 6);

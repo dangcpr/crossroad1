@@ -1,10 +1,15 @@
-﻿  Game.cpp
+﻿  Ctrl.cpp
+  Game.cpp
 D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(15,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(41,15): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(44,15): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(56,43): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(61,45): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(82,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(401,22): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(580,22): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(399,22): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\crossroad1\crossroad1\cross-the-road-1\Game.cpp(571,22): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Menu.cpp
+D:\crossroad1\crossroad1\cross-the-road-1\Menu.cpp(185,7): warning C4101: 'menu': unreferenced local variable
+  main.cpp
+  Generating Code...
   cross-the-road-1.vcxproj -> D:\crossroad1\crossroad1\x64\Debug\cross-the-road-1.exe
