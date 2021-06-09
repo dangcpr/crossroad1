@@ -326,7 +326,7 @@ void SubThread(void)
 			Text("Score: ", 240, menu.x, menu.y);
 			cout << Score;
 			SetColor(240);
-			Sleep(150);
+			Sleep(120);
 		}
 	}
 	
@@ -426,6 +426,7 @@ void ExitGame()
 	system("cls");
 	SetColor(255);
 	BigText("ThankYou.txt", 71, 45, 15);
+	SetColor(255);
 }
 void DrawBoard(int row, int col, int x, int y, int width, int height)
 {
